@@ -23,10 +23,10 @@ class CreatController extends Controller
 
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'categorie'=>['required','min:2','max:10'],
-            'title'=>['required','min:4','max:100'],
-            'paragraphe1'=>['required','min:4','max:500'],
-            'paragraphe2'=>['required','min:4','max:500'],
-            'paragraphe3'=>['required','min:4','max:500'],
+            'title'=>['required','min:4','max:500'],
+            'paragraphe1'=>['required','min:4','max:1000'],
+            'paragraphe2'=>['required','min:4','max:1000'],
+            'paragraphe3'=>['required','min:4','max:1000'],
         ]);
 
         // die(var_dump($request->all()));
