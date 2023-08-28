@@ -856,31 +856,31 @@
                             <h4 class="binduz-er-title">Tous les articles</h4>
                         </div>
                         <div class="binduz-er-categories-list">
-                            <div class="binduz-er-item" style="background-color:rgb(242 51 58); border-radius:27px">
+                            <div class="binduz-er-item" style="background-color:#d6dadd; border-radius:27px">
                                 <a href="article-details.php">
                                     <span>Finances</span>
                                     <span class="binduz-er-number">02</span>
                                 </a>
                             </div>
-                            <div class="binduz-er-item" style="background-color:#5aaded ; border-radius:27px">
+                            <div class="binduz-er-item" style="background-color:#d6dadd; border-radius:27px">
                                 <a href="#">
                                     <span>Industries</span>
                                     <span class="binduz-er-number">04</span>
                                 </a>
                             </div>
-                            <div class="binduz-er-item" style="background-color:#3c5999; border-radius:27px">
+                            <div class="binduz-er-item" style="background-color:#d6dadd; border-radius:27px">
                                 <a href="#">
                                     <span>Politiques</span>
                                     <span class="binduz-er-number">01</span>
                                 </a>
                             </div>
-                            <div class="binduz-er-item" style="background-color:#686e72; border-radius:27px">
+                            <div class="binduz-er-item" style="background-color:#d6dadd; border-radius:27px">
                                 <a href="#">
                                     <span>Bourse</span>
                                     <span class="binduz-er-number">08</span>
                                 </a>
                             </div>
-                            <div class="binduz-er-item" style="background-color:rgb(242 51 58); border-radius:27px">
+                            <div class="binduz-er-item" style="background-color:#d6dadd; border-radius:27px">
                                 <a href="#">
                                     <span>Bourse</span>
                                     <span class="binduz-er-number">08</span>
@@ -1173,28 +1173,17 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="binduz-er-sidebar-about">
-                        <div class="binduz-er-sidebar-social">
-                            <div class="binduz-er-sidebar-title">
-                                <h4 class="binduz-er-title">Réseaux Sociaux</h4>
-                            </div>
-                            <div class="binduz-er-social-list">
-                                <div class="binduz-er-list">
-                                    <a href="#">
-                                        <span><i class="fab fa-facebook-f"></i> <span>facebook</span> </span>
-                                    </a>
-                                    <a href="#">
-                                        <span><i class="fab fa-twitter"></i> <span>Twitter</span> </span>
-                                        <a href="#">
-                                            <span><i class="fab fa-youtube" style="background-color: red!important;"></i> <span>Youtube</span>
-                                            </span>
-
-                                        </a>
+                <div class="binduz-er-populer-news-sidebar-newsletter mt-40">
+                            <div class="binduz-er-newsletter-box text-center">
+                                <img src="assets/images/icon/icon-3.png" alt="">
+                                <h3 class="binduz-er-title"> Newsletter</h3>
+                                <p>L'info à votre porté.</p>
+                                <div class="binduz-er-input-box">
+                                    <input type="text" placeholder="Enter your email">
+                                    <button><i class="fal fa-long-arrow-right"></i></button>
                                 </div>
                             </div>
-
                         </div>
-                    </div>
                     <div class="binduz-er-sidebar-latest-post">
                         <div class="binduz-er-sidebar-title">
                             <h4 class="binduz-er-title">Dernières Publications</h4>

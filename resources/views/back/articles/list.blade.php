@@ -61,7 +61,7 @@
                                                 </div>
                                             </th>
                                             <td>
-                                                <img src="image/{{$List->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2">
+                                                <!-- <img src="images/article/{{$List->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2"> -->
                                                 <a href="#" class="text-body">{{$List->title}}</a>
                                             </td>
                                             <td>{{$List->paragraphe1}}</td>
