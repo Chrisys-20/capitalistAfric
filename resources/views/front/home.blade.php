@@ -88,7 +88,7 @@
                                     </ul>
                                 </li>
                                 <li class="binduz-er-news-menu-item-has-children">
-                                    <a href="#">Termes & Conditions</a>
+                                    <a href="termes&conditions.pdf" target="new">Termes & Conditions</a>
                                 </li>
                             </ul>
                         </div>
@@ -211,7 +211,7 @@
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Termes & Conditions</a>
+                                            <a class="nav-link" href="termes&conditions.pdf" target="new">Termes & Conditions</a>
                                         </li>
                                     </ul>
                                 </div> <!-- navbar collapse -->
@@ -1337,14 +1337,13 @@
     <!--====== BINDUZ FEATURED PART ENDS ======-->
 
     <!--====== BINDUZ FOOTER PART START ======-->
-
     <footer class="binduz-er-footer-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="binduz-er-footer-widget-style-1">
+                        <div class="col-lg-4 col-md-6">
+                        <div class="binduz-er-footer-widget-style-1">
                                 <div class="binduz-er-footer-title">
                                     <h3 class="binduz-er-title">Categories</h3>
                                 </div>
@@ -1364,6 +1363,28 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="binduz-er-footer-widget-style-1">
                                 <div class="binduz-er-footer-title">
+                                    <h3 class="binduz-er-title">Newsletter</h3>
+                                </div>
+                                <div class="binduz-er-footer-widget-form">
+                                    <form action="#">
+                                        <div class="binduz-er-input-box">
+                                            <i class="fal fa-user"></i>
+                                            <input type="text" placeholder="Votre Nom">
+                                        </div>
+                                        <div class="binduz-er-input-box">
+                                            <i class="fal fa-envelope"></i>
+                                            <input type="email" placeholder="Votre address mail ">
+                                        </div>
+                                        <div class="binduz-er-input-box">
+                                            <button type="button"><i class="fal fa-paper-plane"></i> Souscrire</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                        <div class="binduz-er-footer-widget-style-1">
+                                <div class="binduz-er-footer-title">
                                     <h3 class="binduz-er-title">Contacts</h3>
                                 </div>
                                 <div class="binduz-er-footer-widget-form">
@@ -1374,50 +1395,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-5">
-                            <div class="binduz-er-footer-widget-info">
-                                <div class="binduz-er-logo"
-                                    style="background-color: white; border-radius: 5px; padding-top: 10px;">
-                                    <a href="index.php"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt=""></a>
-                                </div>
-                                <div class="binduz-er-text">
-                                    <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Quis ipsum suspend isse ultrices
-                                        gravida.</p>
-                                </div>
-                                <!-- <div class="binduz-er-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#" style="background-color: red!important;"><i class="fab fa-youtube " ></i></a></li>
-                                    </ul>
-                                </div> -->
-                            </div>
-                        </div>
                     </div>
-                    <!-- <div class="col-lg-3" >
-                    <div class="binduz-er-footer-widget-info">
+                </div>
+                <div class="col-lg-3">
+                <div class="binduz-er-footer-widget-info">
                         <div class="binduz-er-logo" style="background-color: white; border-radius: 5px; padding-top: 10px;">
                             <a href="#"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt=""></a>
                         </div>
                         <div class="binduz-er-text">
                             <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspend isse ultrices gravida.</p>
                         </div>
-                        <div class="binduz-er-social">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
+                        
                     </div>
-                </div> -->
                 </div>
             </div>
-            <div class="binduz-er-back-to-top">
-                <p>REMONTEZ <i class="fal fa-long-arrow-right"></i></p>
-            </div>
+        </div>
+        <div class="binduz-er-back-to-top">
+            <p>BACK TO TOP <i class="fal fa-long-arrow-right"></i></p>
+        </div>
     </footer>
     <div class="binduz-er-footer-copyright-area">
         <div class="container">
@@ -1430,7 +1425,7 @@
                 <div class="col-lg-6">
                     <div class="binduz-er-copyright-menu float-lg-end float-none">
                         <ul>
-                            <li><a href="#">Termes & Conditions</a></li>
+                            <li><a href="termes&conditions.pdf" target="new">Termes & Conditions</a></li>
                             <!-- <li><a href="#">Claim A Report</a></li>
                             <li><a href="#">Careers</a></li> -->
                         </ul>
