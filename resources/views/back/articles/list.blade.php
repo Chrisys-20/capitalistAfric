@@ -16,10 +16,10 @@
                 <div class="col-md-6">
                     <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
 
-                        <div>
+                        <!-- <div>
                             <a href="#" data-bs-toggle="modal" data-bs-target=".add-new" data-bs-original-title="test"
                                 class="btn btn-primary"><i class="bx bx-plus me-1"></i> test</a>
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>
@@ -37,8 +37,7 @@
                                         <tr>
                                             <th scope="col" class="ps-4" style="width: 50px;">
                                                 <div class="form-check font-size-16">
-                                                    <input type="checkbox" class="form-check-input"
-                                                        id="contacusercheck">
+                                                    <input type="checkbox" class="form-check-input" id="contacusercheck">
                                                     <label class="form-check-label" for="contacusercheck"></label>
                                                 </div>
                                             </th>
@@ -51,40 +50,32 @@
                                     </thead>
 
                                     <tbody>
+                                        @foreach($articleList as $List)
+
                                         <tr>
                                             <th scope="row" class="ps-4">
                                                 <div class="form-check font-size-16">
-                                                    <input type="checkbox" class="form-check-input"
-                                                        id="contacusercheck1">
+                                                    <input type="checkbox" class="form-check-input" id="contacusercheck1">
                                                     <label class="form-check-label" for="contacusercheck1"></label>
                                                 </div>
                                             </th>
                                             <td>
-                                                <img src="assets/images/users/avatar-2.jpg" alt=""
-                                                    class="avatar rounded-circle img-thumbnail me-2">
+                                                <img src="{{asset('capitalistAf//assets/images/latest-post-3.jpg')}}" alt="" class="avatar rounded-circle img-thumbnail me-2">
                                                 <a href="#" class="text-body">la CDAO et la France</a>
                                             </td>
-                                            <td>contenus de mon article</td>
-                                            <td>#DS0215&@:!</td>
+                                            <td>{{$List->title}}</td>
+                                            <td>{{$List->ref}}</td>
                                             <td><span class="badge badge-soft-success mb-0">activerr</span></td>
                                             <td>
                                                 <ul class="list-inline mb-0">
                                                     <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top" title="Edit"
-                                                            class="px-2 text-primary"><i
-                                                                class="bx bx-pencil font-size-18"></i></a>
+                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
                                                     </li>
                                                     <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip"
-                                                            data-bs-placement="top" title="Delete"
-                                                            class="px-2 text-danger"><i
-                                                                class="bx bx-trash-alt font-size-18"></i></a>
+                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
                                                     </li>
                                                     <li class="list-inline-item dropdown">
-                                                        <a class="text-muted dropdown-toggle font-size-18 px-2" href="#"
-                                                            role="button" data-bs-toggle="dropdown"
-                                                            aria-haspopup="true">
+                                                        <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </a>
 
@@ -97,6 +88,7 @@
                                                 </ul>
                                             </td>
                                         </tr>
+                                        @endforeach
 
                                     </tbody>
                                 </table>
@@ -141,8 +133,7 @@
     <!-- End Page-content -->
 
     <!--  successfully modal  -->
-    <div id="success-btn" class="modal fade" tabindex="-1" aria-labelledby="success-btnLabel" aria-hidden="true"
-        data-bs-scroll="true">
+    <div id="success-btn" class="modal fade" tabindex="-1" aria-labelledby="success-btnLabel" aria-hidden="true" data-bs-scroll="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
@@ -156,8 +147,7 @@
     </div><!-- /.modal -->
 
     <!--  Extra Large modal example -->
-    <div class="modal fade add-new" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
-        aria-hidden="true">
+    <div class="modal fade add-new" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -169,8 +159,7 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label" for="AddNew-Username">Username</label>
-                                <input type="text" class="form-control" placeholder="Enter Username"
-                                    id="AddNew-Username">
+                                <input type="text" class="form-control" placeholder="Enter Username" id="AddNew-Username">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -200,11 +189,8 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-12 text-end">
-                            <button type="button" class="btn btn-danger me-1" data-bs-dismiss="modal"><i
-                                    class="bx bx-x me-1 align-middle"></i> Cancel</button>
-                            <button type="submit" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#success-btn" id="btn-save-event"><i
-                                    class="bx bx-check me-1 align-middle"></i> Confirm</button>
+                            <button type="button" class="btn btn-danger me-1" data-bs-dismiss="modal"><i class="bx bx-x me-1 align-middle"></i> Cancel</button>
+                            <button type="submit" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#success-btn" id="btn-save-event"><i class="bx bx-check me-1 align-middle"></i> Confirm</button>
                         </div>
                     </div>
 
@@ -217,12 +203,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6">
-                    <script>document.write(new Date().getFullYear())</script> © webadmin.
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script> © webadmin.
                 </div>
                 <div class="col-sm-6">
                     <div class="text-sm-end d-none d-sm-block">
-                        Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://Themesdesign.com/"
-                            target="_blank" class="text-reset">Themesdesign</a>
+                        Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://Themesdesign.com/" target="_blank" class="text-reset">Themesdesign</a>
                     </div>
                 </div>
             </div>

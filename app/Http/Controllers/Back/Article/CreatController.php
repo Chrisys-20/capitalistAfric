@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Back\Article;
 
 use App\Http\Controllers\Controller;
 use App\Fonction\Fonction;
+use App\Models\Article;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CreatController extends Controller
 {
@@ -15,48 +17,79 @@ class CreatController extends Controller
         return view('back.articles.create');
     }
 
-    public function insert(Request $request){
+    public function store(Request $request){
 
         $incomingFields=$request->validate([
 
-            'image' => ['required','image|mimes:jpeg,png,jpg,gif,svg|max:2048'],
-            'category'=>['required','min:4','max:10'],
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'categorie'=>['required','min:2','max:10'],
             'title'=>['required','min:4','max:100'],
-            'description'=>['required','min:4','max:500'],
-
+            'paragraphe1'=>['required','min:4','max:500'],
+            'paragraphe2'=>['required','min:4','max:500'],
+            'paragraphe3'=>['required','min:4','max:500'],
         ]);
+
+        // die(var_dump($request->all()));
+        //dd($request->all());
 
         do {
             $ref='Article_'.(new  Fonction())->genUniqueID('22');
-            $find_ref=DB::select('select * from article where ref="'.$ref.'"');
+            $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
         }while (!empty($find_ref));
 
         $image_path = "images/article/image_".$ref.'.'.$request->file('image')->getClientOriginalExtension();
         $request->file('image')->move(public_path() . '/images/article' ,$image_path);
+        
+        //die(var_dump('yes'));
+
+        $my_article = new Article;
+
+        $my_article->user_id = Auth::user()->id;
+        $my_article->ref = $ref;
+        $my_article->title = $request->title;
+        $my_article->categorie = $request->categorie;
+        $my_article->image = $image_path;
+        $my_article->paragraphe1 = $request->paragraphe1;
+        $my_article->paragraphe2 = $request->paragraphe2;
+        $my_article->paragraphe3 = $request->paragraphe3;
+
+
+        $my_article->save();
+
+        // $my_article['user_id'] = strip_tags(Auth::user()->id);
+        // $my_article['title'] = strip_tags($request->title);
+        // $my_article['categorie'] = strip_tags($request->categorie);
+        // $my_article['image'] = strip_tags($image_path);
+        // $my_article['paragraphe1'] = strip_tags($request->paragraphe1);
+        // $my_article['paragraphe2'] = strip_tags($request->paragraphe2);
+        // $my_article['paragraphe3'] = strip_tags($request->paragraphe3);
+
+        //dd($my_article);
+
+        // Article::create($my_article);
+
+        // $ad_user=DB::table('users')
+        // ->where('role','admin')
+        // ->selectRaw('users.ref,users.name,users.email,users.phone,users.role')
+        // ->get();
 
         
 
-        $ad_user=DB::table('users')
-        ->where('role','admin')
-        ->selectRaw('users.ref,users.name,users.email,users.phone,users.role')
-        ->get();
+        // DB::table('article')
+        // ->insert([
+        //     "id"=> Auth::user()->id,
+        //     "title"=>$request->title,
+        //     "question"=>$request->description,
+        //     "link_image"=>$image_path,
+        //     "content"=>$request->content,
+        //     "read_time"=>$request->min_lecture,
+        //     "ref"=>$ref
 
-        
+        // ]);
 
-        DB::table('article')
-        ->insert([
-            "id"=> Auth::user()->id,
-            "title"=>$request->title,
-            "question"=>$request->question,
-            "link_image"=>$image_path,
-            "content"=>$request->content,
-            "read_time"=>$request->min_lecture,
-            "ref"=>$ref
-
-        ]);
-
-        // return back();
-        return view('dashboard.articles.create',['ad_user'=>$ad_user]);
+        // return back()->withSucess('Article crée!!');
+        // return view('dashboard.articles.create',['ad_user'=>$ad_user]);
+        return back()->with(['message'=>'Article crée avec success']);
     }
 
 }

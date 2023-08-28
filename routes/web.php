@@ -26,15 +26,21 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'isAdmin'])->name('dashboard');
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
-    Route::get('/dashb', [DashbController::class, 'index'])->name('my.dashboard');
+    Route::get('/dashboard', [DashbController::class, 'index'])->name('my.dashboard');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     
     Route::get('/create',[CreatController::class,'index'])->name('article.create');
+    Route::post('/store',[CreatController::class,'store'])->name('article.store');
     Route::get('/edit',[CreatController::class,'edit'])->name('article.edit');
+
+
+
     Route::get('/list',[ListController::class,'index'])->name('article.list');
+
+
 
 
 });
