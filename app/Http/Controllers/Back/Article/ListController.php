@@ -15,10 +15,37 @@ class ListController extends Controller
         $articleList=DB::table('articles')
         ->get();
 
-        
-        
         return view('back.articles.list',['articleList'=>$articleList]);
     }
+
+
+    public function active($ref){
+
+        $rounds = DB::table('articles')
+        ->where('ref', $ref)
+        ->update(['status' => 'activé']);
+
+        return back();
+    }
+
+    public function desactive($ref){
+
+        $rounds = DB::table('articles')
+        ->where('ref', $ref)
+        ->update(['status' => 'déactivé']);
+
+        return back();
+    }
+
+    public function priority($ref){
+
+        $rounds = DB::table('articles')
+        ->where('ref', $ref)
+        ->update(['priority' => 'principale']);
+
+        return back();
+    }
+
 
     
 }

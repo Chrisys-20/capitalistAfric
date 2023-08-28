@@ -14,7 +14,11 @@ class DashbController extends Controller
         $articleList=DB::table('articles')
         ->get();
 
+        $principaleArticle=DB::table('articles')
+        ->where('priority', "principale")
+        ->get();
 
-        return view('back.dashb',['articleList'=>$articleList]);
+
+        return view('back.dashb',['articleList'=>$articleList, 'principaleArticle'=>$principaleArticle]);
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Back\Article\CreatController;
 use App\Http\Controllers\Back\Article\ListController;
+use App\Http\Controllers\Back\Article\NewsletterController;
 use App\Http\Controllers\Back\DashbController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,15 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
 
 
     Route::get('/list',[ListController::class,'index'])->name('article.list');
+    Route::get('/list/{ref}/activeted',[ListController::class,'active'])->name('article.list.activeted');
+    // Route::post('/list/{ref}/activeted',[ListController::class,'active'])->name('article.list.activeted');
+    Route::get('/list/{ref}/desactiveted',[ListController::class,'desactive'])->name('article.list.desactiveted');
+    Route::get('/list/{ref}/priority',[ListController::class,'priority'])->name('article.list.priority');
+
+
+    Route::get('/newsletter',[NewsletterController::class,'index'])->name('newsletter.list');
+
+
 
 
 

@@ -9,17 +9,16 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="mb-3">
-                        <h5 class="card-title">Ma liste <span class="text-muted fw-normal ms-2">(834)</span></h5>
+                        <h5 class="card-title">Liste des adresses mails <span class="text-muted fw-normal ms-2"></span></h5>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
 
-                        <!-- <div>
-                            <a href="#" data-bs-toggle="modal" data-bs-target=".add-new" data-bs-original-title="test"
-                                class="btn btn-primary"><i class="bx bx-plus me-1"></i> test</a>
-                        </div> -->
+                        <div>
+                            <a href="javascript:void(0);"  class="btn btn-primary"></i> </a>
+                        </div>
                     </div>
 
                 </div>
@@ -41,19 +40,13 @@
                                                     <label class="form-check-label" for="contacusercheck"></label>
                                                 </div>
                                             </th>
-                                            <th scope="col">Nom</th>
-                                            <th scope="col">Paragraphe1</th>
-                                            <th scope="col">Id article</th>
-                                            <th scope="col">Catégorie</th>
-                                            <th scope="col">Priorité</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col" style="width: 200px;">Action</th>
+                                            <th scope="col">#</th>
+                                            <th scope="col" style="width: 0px;">Nom</th>
+                                            <th scope="col">Email</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
-                                        @foreach($articleList as $List)
-
                                         <tr>
                                             <th scope="row" class="ps-4">
                                                 <div class="form-check font-size-16">
@@ -62,57 +55,13 @@
                                                 </div>
                                             </th>
                                             <td>
-                                                <!-- <img src="images/article/{{$List->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2"> -->
-                                                <a href="#" class="text-body">{{$List->title}}</a>
+                                                <a href="#" class="text-body">1</a>
                                             </td>
-                                            <td>{{$List->paragraphe1}}</td>
-                                            <td>{{$List->ref}}</td>
-                                            @if($List->categorie=="fi")
-                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(245 158 11)">Finances</span></td>
-                                            @elseif($List->categorie=="id")
-                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(234 179 8)">Industries</span></td>
-                                            @elseif($List->categorie=="po")
-                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(240 171 252)">Politique</span></td>
-                                            @elseif($List->categorie=="bo")
-                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(165 180 252)">Bourse</span></td>
-                                            @else
-                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(103 232 249)">Analyses</span></td>
-                                            @endif
-
-                                            @if($List->priority=="principale")
-                                            <td><span class="badge badge-soft-primary mb-0" >Principale</span></td>
-                                            @else
-                                            <td><span class="badge badge-soft-warning mb-0" >Simple</span></td>
-                                            @endif
-
-                                            @if($List->status=="activé")
-                                            <td><span class="badge badge-soft-success mb-0" >activé</span></td>
-                                            @else
-                                            <td><span class="badge badge-soft-danger mb-0" >désactivé</span></td>
-                                            @endif
                                             <td>
-                                                <ul class="list-inline mb-0">
-                                                    <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
-                                                    </li>
-                                                    <li class="list-inline-item dropdown">
-                                                        <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
-
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="{{route('article.list.activeted',['ref'=>$List->ref])}}">Activer</a>
-                                                            <a class="dropdown-item" href="{{route('article.list.desactiveted',['ref'=>$List->ref])}}">Désactiver</a>
-                                                            <a class="dropdown-item" href="{{route('article.list.priority',['ref'=>$List->ref])}}">Principale</a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+                                                <a href="#" class="text-body">Douglas</a>
                                             </td>
+                                            <td>douglas@gmail.com</td>
                                         </tr>
-                                        @endforeach
 
                                     </tbody>
                                 </table>

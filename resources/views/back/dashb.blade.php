@@ -37,7 +37,7 @@
                                 <div class="">
                                     <div class="avatar">
                                         <div class="avatar-title rounded bg-soft-primary">
-                                        <i class="bx bx-revision font-size-24 mb-0 text-primary"></i>
+                                            <i class="bx bx-revision font-size-24 mb-0 text-primary"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                 <div class="">
                                     <div class="avatar">
                                         <div class="avatar-title rounded bg-soft-primary">
-                                        <i class="bx bx-money font-size-24 mb-0 text-primary"></i>
+                                            <i class="bx bx-money font-size-24 mb-0 text-primary"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@
                                 <div class="">
                                     <div class="avatar">
                                         <div class="avatar-title rounded bg-soft-primary">
-                                        <i class="bx bx-chart font-size-24 mb-0 text-primary"></i>
+                                            <i class="bx bx-chart font-size-24 mb-0 text-primary"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -105,10 +105,14 @@
             </div>
             <!-- END ROW -->
 
+
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 " style="margin-top: 60px;;">
                     <div class="card">
                         <div class="card-body">
+                            <div class="mb-4">
+                                <h5 class="card-title">Les grands titres <span class="text-muted fw-normal ms-2">(834)</span></h5>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table table-nowrap align-middle">
                                     <thead class="table-light">
@@ -119,16 +123,15 @@
                                                     <label class="form-check-label" for="contacusercheck"></label>
                                                 </div>
                                             </th>
-                                            <th scope="col">Grang Titre</th>
+                                            <th scope="col" style="width: 200px;">Grang Titre</th>
                                             <th scope="col">Id article</th>
-                                            <th scope="col">Catégorie</th>
+                                            <th scope="col">Priorité</th>
                                             <th scope="col">status</th>
-                                            <th scope="col" style="width: 200px;">Action</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
-                                        @foreach($articleList as $List)
+                                        @foreach( $principaleArticle as $prinList)
 
                                         <tr>
                                             <th scope="row" class="ps-4">
@@ -138,33 +141,25 @@
                                                 </div>
                                             </th>
                                             <td>
-                                                <!-- <img src="dashboard/asset{{$List->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2"> -->
-                                                <a href="#" class="text-body">{{$List->title}}</a>
+                                                <!-- <img src="dashboard/asset{{$prinList->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2"> -->
+                                                <a href="#" class="text-body">{{$prinList->title}}</a>
                                             </td>
-                                            <td>{{$List->ref}}</td>
-                                            <td><span class="badge badge-soft-warning mb-0">désactiver</span></td>
-                                            <td><span class="badge badge-soft-danger mb-0">désactiver</span></td>
-                                            <td>
-                                                <ul class="list-inline mb-0">
-                                                    <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
-                                                    </li>
-                                                    <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
-                                                    </li>
-                                                    <li class="list-inline-item dropdown">
-                                                        <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </a>
+                                            <td>{{$prinList->ref}}</td>
+                                            @if($prinList->priority=="principale")
+                                            <td><span class="badge badge-soft-primary mb-0" >Principale</span></td>
+                                            @else
+                                            <td><span class="badge badge-soft-warning mb-0" >Simple</span></td>
+                                            @endif
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Activer</a>
-                                                            <a class="dropdown-item" href="#">Désactiver</a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </td>
+                                            @if($prinList->status=="activé")
+                                            <td><span class="badge badge-soft-success mb-0" >activé</span></td>
+                                            @else
+                                            <td><span class="badge badge-soft-danger mb-0" >désactivé</span></td>
+                                            @endif
+                                            
+                                            
                                         </tr>
+                                        
                                         @endforeach
 
                                     </tbody>
