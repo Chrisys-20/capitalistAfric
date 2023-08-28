@@ -37,8 +37,8 @@ class CreatController extends Controller
             $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
         }while (!empty($find_ref));
 
-        $image_path = "images/article/image_".$ref.'.'.$request->file('image')->getClientOriginalExtension();
-        $request->file('image')->move(public_path() . '/images/article' ,$image_path);
+        $image_path = $ref.'.'.$request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(public_path(),$image_path);
         
         //die(var_dump('yes'));
 

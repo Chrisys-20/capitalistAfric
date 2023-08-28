@@ -106,7 +106,7 @@
             <!-- END ROW -->
 
             <div class="row">
-                <div class="col-lg-12 mt-5">
+                <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
                             <div class="table-responsive">
@@ -119,14 +119,17 @@
                                                     <label class="form-check-label" for="contacusercheck"></label>
                                                 </div>
                                             </th>
-                                            <th scope="col" style="width: 350px;">Nom</th>
+                                            <th scope="col">Grang Titre</th>
                                             <th scope="col">Id article</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Date de publication</th>
+                                            <th scope="col">Catégorie</th>
+                                            <th scope="col">status</th>
+                                            <th scope="col" style="width: 200px;">Action</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
+                                        @foreach($articleList as $List)
+
                                         <tr>
                                             <th scope="row" class="ps-4">
                                                 <div class="form-check font-size-16">
@@ -135,12 +138,34 @@
                                                 </div>
                                             </th>
                                             <td>
-                                                <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar rounded-circle img-thumbnail me-2">
-                                                <a href="#" class="text-body">la CDAO et la France</a>
+                                                <!-- <img src="dashboard/asset{{$List->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2"> -->
+                                                <a href="#" class="text-body">{{$List->title}}</a>
                                             </td>
-                                            <td>#DS0215&@:!</td>
-                                            <td><span class="badge badge-soft-success mb-0">activerr</span></td>
+                                            <td>{{$List->ref}}</td>
+                                            <td><span class="badge badge-soft-warning mb-0">désactiver</span></td>
+                                            <td><span class="badge badge-soft-danger mb-0">désactiver</span></td>
+                                            <td>
+                                                <ul class="list-inline mb-0">
+                                                    <li class="list-inline-item">
+                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
+                                                    </li>
+                                                    <li class="list-inline-item dropdown">
+                                                        <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#">Activer</a>
+                                                            <a class="dropdown-item" href="#">Désactiver</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </td>
                                         </tr>
+                                        @endforeach
 
                                     </tbody>
                                 </table>

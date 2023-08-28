@@ -81,10 +81,10 @@
                                     <a href="#"> Catégories</a>
                                     <ul class="binduz-er-news-sub-menu">
                                         <li><a href="article-details.php">Finances</a></li>
-                                                <li><a href="#">Politiques</a></li>
-                                                <li><a href="#">Industries</a></li>
-                                                <li><a href="#">Analyses</a></li>
-                                                <li><a href="#">Bourse</a></li>
+                                        <li><a href="#">Politiques</a></li>
+                                        <li><a href="#">Industries</a></li>
+                                        <li><a href="#">Analyses</a></li>
+                                        <li><a href="#">Bourse</a></li>
                                     </ul>
                                 </li>
                                 <li class="binduz-er-news-menu-item-has-children">
@@ -109,6 +109,103 @@
             </div>
         </div>
     </div>
+
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <img src="{{asset('capitalistAf/assets/images/LogoCA.png')}} " alt="" width="180px">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="name"  name="name" required autofocus autocomplete="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Email</label>
+                                <input  class="form-control" id="email" type="email" name="email" required autofocus autocomplete="username">
+                            </div>
+                            @if(session()->has('error'))
+                            <div class="col-lg-12 alert-notification mt-2">
+                                <div id="message" class="alert alert-danger">{{session()->get('error')}}</div>
+                            </div>
+                            @endif
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Password</label>
+                                <input class="form-control" type="password" name="password" required autocomplete="new-password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Confirm Password</label>
+                                <input class="form-control" type="password" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        @if (Route::has('password.request'))
+                        <a class="" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="text-decoration: underline;">
+                        {{ __('Already registered?') }}
+                        </a>
+                        @endif
+                        <button ttype="submit" class="btn btn-danger">REGISTER</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- end modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <img src="{{asset('capitalistAf/assets/images/LogoCA.png')}} " alt="" width="180px">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Email</label>
+                                <input type="text" class="form-control" id="email" type="email" name="email" required autofocus autocomplete="username">
+                            </div>
+                            @if(session()->has('error'))
+                            <div class="col-lg-12 alert-notification mt-2">
+                                <div id="message" class="alert alert-danger">{{session()->get('error')}}</div>
+                            </div>
+                            @endif
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Password</label>
+                                <input class="form-control" type="password" name="password" required autocomplete="current-password">
+                            </div>
+                            <!-- Remember Me -->
+                            <div class="block mt-4">
+                                <label for="remember_me" class="inline-flex items-center">
+                                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                                </label>
+                            </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        @if (Route::has('password.request'))
+                        <a class="" href="#" style="text-decoration: underline;">
+                            {{ __('Forgot your password?') }}
+                        </a>
+                        @endif
+                        <button ttype="submit" class="btn btn-danger">LOGIN</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- end modal -->
 
     <!--====== OFFCANVAS MENU PART ENDS ======-->
 
@@ -193,8 +290,7 @@
                     <div class="col-lg-12">
                         <div class="navigation">
                             <nav class="navbar navbar-expand-lg">
-                                <div class="navbar-brand logo"><a href="index.php"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}"
-                                            alt="" width="150px"></a></div> <!-- logo -->
+                                <div class="navbar-brand logo"><a href="index.php"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt="" width="150px"></a></div> <!-- logo -->
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item active">
@@ -217,13 +313,16 @@
                                 </div> <!-- navbar collapse -->
                                 <div class="binduz-er-navbar-btn d-flex">
                                     <div class="binduz-er-widget d-flex">
-                                        <!-- <a class="binduz-er-news-search-open" href="#"><i class="far fa-search"></i></a> -->
-                                        |<a href="{{route('register')}}"><i class="far fa-user"></i></a>
+                                        <a  href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="far fa-lock"></i></a>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-user"></i></a>
                                     </div>
                                     <span class="binduz-er-toggle-btn binduz-er-news-canvas_open d-block d-lg-none">
                                         <i class="fal fa-bars"></i>
                                     </span>
                                 </div>
+                                <!-- Button trigger modal -->
+
+
                             </nav>
                         </div> <!-- navigation -->
                     </div>
@@ -328,8 +427,7 @@
                     <!-- <div class="binduz-er-add pt-10 pb-20">
                         <img src="{{asset('capitalistAf/assets/images/space-thumb.jpg')}}" alt="">
                     </div> -->
-                    <div
-                        class="binduz-er-trending-news-topbar d-block d-md-flex justify-content-between align-items-center">
+                    <div class="binduz-er-trending-news-topbar d-block d-md-flex justify-content-between align-items-center">
                         <div class="binduz-er-trending-box">
                             <div class="binduz-er-title">
                                 <h3 class="binduz-er-title">Catégories</h3>
@@ -339,20 +437,16 @@
                         <div class="binduz-er-news-tab-btn d-flex justify-content-md-end justify-content-start">
                             <ul class="nav nav-pills " id="pills-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" href="#pills-1"
-                                        role="tab" aria-controls="pills-1" aria-selected="true" >Finances</a>
+                                    <a class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">Finances</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2"
-                                        role="tab" aria-controls="pills-2" aria-selected="false">Politiques</a>
+                                    <a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">Politiques</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-3-tab" data-bs-toggle="pill" href="#pills-3"
-                                        role="tab" aria-controls="pills-3" aria-selected="false">Industries</a>
+                                    <a class="nav-link" id="pills-3-tab" data-bs-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">Industries</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-4-tab" data-bs-toggle="pill" href="#pills-4"
-                                        role="tab" aria-controls="pills-4" aria-selected="false">Bourse</a>
+                                    <a class="nav-link" id="pills-4-tab" data-bs-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">Bourse</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <!-- <a class="nav-link" id="pills-5-tab" data-bs-toggle="pill" href="#pills-5" role="tab" aria-controls="pills-5" aria-selected="false">Bourse</a> -->
@@ -364,8 +458,7 @@
                         <div class="col-lg-12">
                             <div class="binduz-er-trending-news-list">
                                 <div class="tab-content mt-50" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-1" role="tabpanel"
-                                        aria-labelledby="pills-1-tab">
+                                    <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
                                         <div class="row">
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
@@ -390,12 +483,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-5 col-md-6">
-                                                <div class="binduz-er-trending-news-list-item   "
-                                                    style="overflow-y: auto; height: 420px;">
+                                                <div class="binduz-er-trending-news-list-item   " style="overflow-y: auto; height: 420px;">
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -415,8 +506,7 @@
                                                     </div>
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -436,8 +526,7 @@
                                                     </div>
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -460,8 +549,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-2" role="tabpanel"
-                                        aria-labelledby="pills-2-tab">
+                                    <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
                                         <div class="row">
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
@@ -490,12 +578,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-5 col-md-6">
-                                                <div class="binduz-er-trending-news-list-item"
-                                                    style="overflow-y: auto; height: 420px;">
+                                                <div class="binduz-er-trending-news-list-item" style="overflow-y: auto; height: 420px;">
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -515,8 +601,7 @@
                                                     </div>
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -538,8 +623,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-3" role="tabpanel"
-                                        aria-labelledby="pills-3-tab">
+                                    <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
                                         <div class="row">
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
@@ -568,12 +652,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-5 col-md-6">
-                                                <div class="binduz-er-trending-news-list-item"
-                                                    style="overflow-y: auto; height: 420px;">
+                                                <div class="binduz-er-trending-news-list-item" style="overflow-y: auto; height: 420px;">
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -593,8 +675,7 @@
                                                     </div>
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -616,8 +697,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-4" role="tabpanel"
-                                        aria-labelledby="pills-4-tab">
+                                    <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
                                         <div class="row">
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
@@ -645,12 +725,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-5 col-md-6">
-                                                <div class="binduz-er-trending-news-list-item"
-                                                    style="overflow-y: auto; height: 420px;">
+                                                <div class="binduz-er-trending-news-list-item" style="overflow-y: auto; height: 420px;">
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -670,8 +748,7 @@
                                                     </div>
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -693,8 +770,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="pills-5" role="tabpanel"
-                                        aria-labelledby="pills-5-tab">
+                                    <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab">
                                         <div class="row">
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
@@ -723,12 +799,10 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-5 col-md-6">
-                                                <div class="binduz-er-trending-news-list-item"
-                                                    style="overflow-y: auto; height: 420px;">
+                                                <div class="binduz-er-trending-news-list-item" style="overflow-y: auto; height: 420px;">
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -748,8 +822,7 @@
                                                     </div>
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}"
-                                                                alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -795,7 +868,7 @@
                                     <span class="binduz-er-number">04</span>
                                 </a>
                             </div>
-                            <div class="binduz-er-item" style="background-color:#3c5999; border-radius:27px" >
+                            <div class="binduz-er-item" style="background-color:#3c5999; border-radius:27px">
                                 <a href="#">
                                     <span>Politiques</span>
                                     <span class="binduz-er-number">01</span>
@@ -1113,14 +1186,13 @@
                                     <a href="#">
                                         <span><i class="fab fa-twitter"></i> <span>Twitter</span> </span>
                                         <a href="#">
-                                            <span><i class="fab fa-youtube"
-                                                    style="background-color: red!important;"></i> <span>Youtube</span>
+                                            <span><i class="fab fa-youtube" style="background-color: red!important;"></i> <span>Youtube</span>
                                             </span>
 
                                         </a>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
                     <div class="binduz-er-sidebar-latest-post">
@@ -1343,7 +1415,7 @@
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
-                        <div class="binduz-er-footer-widget-style-1">
+                            <div class="binduz-er-footer-widget-style-1">
                                 <div class="binduz-er-footer-title">
                                     <h3 class="binduz-er-title">Categories</h3>
                                 </div>
@@ -1383,7 +1455,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                        <div class="binduz-er-footer-widget-style-1">
+                            <div class="binduz-er-footer-widget-style-1">
                                 <div class="binduz-er-footer-title">
                                     <h3 class="binduz-er-title">Contacts</h3>
                                 </div>
@@ -1398,14 +1470,14 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                <div class="binduz-er-footer-widget-info">
+                    <div class="binduz-er-footer-widget-info">
                         <div class="binduz-er-logo" style="background-color: white; border-radius: 5px; padding-top: 10px;">
                             <a href="#"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt=""></a>
                         </div>
                         <div class="binduz-er-text">
                             <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspend isse ultrices gravida.</p>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -1419,7 +1491,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="binduz-er-copyright-text">
-                        <p>2023	&copy; All right reserved By <span><a href="#" style="color: white;">CAPITALIST AFRICA</a></span> </p>
+                        <p>2023 &copy; All right reserved By <span><a href="#" style="color: white;">CAPITALIST AFRICA</a></span> </p>
                     </div>
                 </div>
                 <div class="col-lg-6">

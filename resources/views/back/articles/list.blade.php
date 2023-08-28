@@ -42,9 +42,10 @@
                                                 </div>
                                             </th>
                                             <th scope="col">Nom</th>
-                                            <th scope="col">Description</th>
+                                            <th scope="col">Paragraphe1</th>
                                             <th scope="col">Id article</th>
-                                            <th scope="col">status</th>
+                                            <th scope="col">Catégorie</th>
+                                            <th scope="col">Status</th>
                                             <th scope="col" style="width: 200px;">Action</th>
                                         </tr>
                                     </thead>
@@ -60,12 +61,24 @@
                                                 </div>
                                             </th>
                                             <td>
-                                                <img src="{{asset('capitalistAf//assets/images/latest-post-3.jpg')}}" alt="" class="avatar rounded-circle img-thumbnail me-2">
-                                                <a href="#" class="text-body">la CDAO et la France</a>
+                                                <img src="image/{{$List->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2">
+                                                <a href="#" class="text-body">{{$List->title}}</a>
                                             </td>
-                                            <td>{{$List->title}}</td>
+                                            <td>{{$List->paragraphe1}}</td>
                                             <td>{{$List->ref}}</td>
-                                            <td><span class="badge badge-soft-success mb-0">activerr</span></td>
+                                            @if($List->categorie=="fi")
+                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(245 158 11)">Finances</span></td>
+                                            @elseif($List->categorie=="id")
+                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(234 179 8)">Industries</span></td>
+                                            @elseif($List->categorie=="po")
+                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(240 171 252)">Politique</span></td>
+                                            @elseif($List->categorie=="bo")
+                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(165 180 252)">Bourse</span></td>
+                                            @else
+                                            <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(103 232 249)">Analyses</span></td>
+                                            @endif
+
+                                            <td><span class="badge badge-soft-success mb-0" >activer</span></td>
                                             <td>
                                                 <ul class="list-inline mb-0">
                                                     <li class="list-inline-item">
@@ -80,9 +93,8 @@
                                                         </a>
 
                                                         <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Action</a>
-                                                            <a class="dropdown-item" href="#">Another action</a>
-                                                            <a class="dropdown-item" href="#">Something else here</a>
+                                                            <a class="dropdown-item" href="#">Activer</a>
+                                                            <a class="dropdown-item" href="#">Désactiver</a>
                                                         </div>
                                                     </li>
                                                 </ul>
