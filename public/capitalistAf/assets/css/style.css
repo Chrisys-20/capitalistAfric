@@ -1456,7 +1456,7 @@ p {
       top: 50%;
       transform: translateY(-50%);
       height: 4px;
-      width: 390px;
+      width:344px;
       background: #F63A3A; }
       @media only screen and (min-width: 1200px) and (max-width: 1600px) {
         .binduz-er-trending-box .binduz-er-title .binduz-er-title::before {

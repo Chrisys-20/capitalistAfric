@@ -42,7 +42,7 @@
                                                 </div>
                                             </th>
                                             <th scope="col">Nom</th>
-                                            <th scope="col">Paragraphe1</th>
+                                            <th scope="col" style="width: 50px;">Paragraphe1</th>
                                             <th scope="col">Id article</th>
                                             <th scope="col">Catégorie</th>
                                             <th scope="col">Priorité</th>
@@ -53,7 +53,6 @@
 
                                     <tbody>
                                         @foreach($articleList as $List)
-
                                         <tr>
                                             <th scope="row" class="ps-4">
                                                 <div class="form-check font-size-16">
@@ -65,7 +64,7 @@
                                                 <!-- <img src="images/article/{{$List->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2"> -->
                                                 <a href="#" class="text-body">{{$List->title}}</a>
                                             </td>
-                                            <td>{{$List->paragraphe1}}</td>
+                                            <td style="width: 50px;">{{$List->paragraphe1}}</td>
                                             <td>{{$List->ref}}</td>
                                             @if($List->categorie=="fi")
                                             <td><span class="badge badge-soft-warning mb-0" style="color:black;background-color:rgb(245 158 11)">Finances</span></td>

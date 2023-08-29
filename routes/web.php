@@ -4,6 +4,8 @@ use App\Http\Controllers\Back\Article\CreatController;
 use App\Http\Controllers\Back\Article\ListController;
 use App\Http\Controllers\Back\Article\NewsletterController;
 use App\Http\Controllers\Back\DashbController;
+use App\Http\Controllers\Front\ContactController;
+use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,10 +21,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('front.home')->name('home');
+    return redirect()->route('front.home');
 });
 
 
+
+Route::prefix('accueil')->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('front.home');
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+
+
+});
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::get('/dashboard', [DashbController::class, 'index'])->name('my.dashboard');
