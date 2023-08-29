@@ -49,6 +49,7 @@ class CreatController extends Controller
         $my_article->title = $request->title;
         $my_article->categorie = $request->categorie;
         $my_article->image = $image_path;
+        $my_article->blockote = $request->blockote;
         $my_article->paragraphe1 = $request->paragraphe1;
         $my_article->paragraphe2 = $request->paragraphe2;
         $my_article->paragraphe3 = $request->paragraphe3;
