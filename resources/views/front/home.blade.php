@@ -61,7 +61,7 @@
                         <div id="menu" class="text-left ">
                             <ul class="binduz-er-news-offcanvas_main_menu">
                                 <li class="binduz-er-news-menu-item-has-children ">
-                                    <a href="index.php">Accueil</a>
+                                    <a href="/">Accueil</a>
                                     <!-- <ul class="binduz-er-news-sub-menu">
                                         <li><a href="index.html">Home 1</a></li>
                                         <li><a href="index-2.html">Home 2</a></li>
@@ -294,7 +294,7 @@
                                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                     <ul class="navbar-nav m-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="index.php">Accueil</a>
+                                            <a class="nav-link" href="/">Accueil</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#">Catégories<i class="fa fa-angle-down"></i></a>
@@ -307,7 +307,7 @@
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="termes&conditions.pdf" target="new">Termes & Conditions</a>
+                                            <a class="nav-link" href="termes&conditions.pdf" target="new">Conditions générales</a>
                                         </li>
                                     </ul>
                                 </div> <!-- navbar collapse -->
@@ -1486,7 +1486,7 @@
                 <div class="col-lg-6">
                     <div class="binduz-er-copyright-menu float-lg-end float-none">
                         <ul>
-                            <li><a href="termes&conditions.pdf" target="new">Termes & Conditions</a></li>
+                            <li><a href="termes&conditions.pdf" target="new">Conditions générales</a></li>
                             <!-- <li><a href="#">Claim A Report</a></li>
                             <li><a href="#">Careers</a></li> -->
                         </ul>

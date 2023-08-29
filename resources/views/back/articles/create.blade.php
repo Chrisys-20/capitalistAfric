@@ -123,7 +123,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="text-sm-end d-none d-sm-block">
-                        <a href="#" target="_blank" class="text-reset">Termes & Conditions</a>
+                        <a href="#" target="_blank" class="text-reset">Conditions générales</a>
                     </div>
                 </div>
             </div>
