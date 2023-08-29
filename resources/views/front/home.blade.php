@@ -78,7 +78,7 @@
                                         <span><i class="fal fa-calendar-alt"></i> 23 Août 2023</span>
                                     </div>
                                 </div>
-                                <h4 class="binduz-er-title"><a href="#">{{$mycategorie->title}}</a></h4>
+                                <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                             </div>
                         </div>
                         @endif
@@ -173,7 +173,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
-                                                                <h4 class="binduz-er-title"><a href="#">{{$mycategorie->title}}</a></h4>
+                                                                <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -225,7 +225,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
-                                                                <h4 class="binduz-er-title"><a href="#">{{$mycategorie->title}}</a></h4>
+                                                            <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -277,7 +277,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
-                                                                <h4 class="binduz-er-title"><a href="#">{{$mycategorie->title}}</a></h4>
+                                                            <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -329,11 +329,10 @@
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
-                                                                <h4 class="binduz-er-title"><a href="#">{{$mycategorie->title}}</a></h4>
+                                                            <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                                 @endif
                                                 @endforeach
@@ -381,11 +380,10 @@
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
-                                                                <h4 class="binduz-er-title"><a href="#">{{$mycategorie->title}}</a></h4>
+                                                            <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                                 @endif
                                                 @endforeach
@@ -409,8 +407,8 @@
                                     <img src="{{asset('capitalistAf/assets/images/latest-post-4.jpg')}}" alt="latest">
                                 </div>
                                 <div class="binduz-er-content">
-                                    <span><i class="fal fa-calendar-alt"></i> 23 Août 2023</span>
-                                    <h4 class="binduz-er-title"><a href="#">Introducing Android Earthquake Alerts</a>
+                                    <span><i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>
+                                    <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$malist->title}}</a></h4>
                                     </h4>
                                 </div>
                             </div>
@@ -575,9 +573,8 @@
                                             </div>
                                         </div>
                                         <div class="binduz-er-trending-news-list-title">
-                                            <h4 class="binduz-er-title"><a href="#">{{$malist->title}}</a></h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor in cididunt ut labore et dolore</p>
+                                        <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$malist->ref,'categorie'=>$malist->categorie])}}">{{$malist->title}}</a></h4>
+                                            <p>{{$malist->paragraphe1}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -813,7 +810,3 @@
 
     <!--====== BINDUZ FOOTER PART START ======-->
     @include('front.layout.footer')
-
-</body>
-
-</html>

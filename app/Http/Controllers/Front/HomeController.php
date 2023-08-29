@@ -24,7 +24,10 @@ class HomeController extends Controller
         ->where('status','activé')
         ->limit(10)
         ->get();
-
+     
         return view('front.home',['categories'=>$categories,'lastPublication'=>$lastPublication,'publication'=>$publication]);
     }
+
+
+
 }

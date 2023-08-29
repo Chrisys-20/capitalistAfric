@@ -71,25 +71,81 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 mb-0">
-                                            <label class="form-label" for="productdesc">Paragraphe1</label>
+                                            <label class="form-label" for="productdesc">Citation</label>
+                                            @if($errors->has('citation'))
+                                            <span class="text-danger">{{$errors->first('citation')}}</span>
+                                            @endif
+                                            <textarea class="form-control" minlength="4" maxlength="2000" required name="blockote" id="productdesc1" placeholder="Entrez votre citation" rows="8"></textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc3">Paragraphe1</label>
                                             @if($errors->has('paragraphe1'))
                                             <span class="text-danger">{{$errors->first('paragraphe1')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="paragraphe1" id="productdesc" placeholder="Entrez le premier paragraphe" rows="8"></textarea>
+                                            <textarea class="form-control" name="paragraphe" id="productdesc2" placeholder="Entrez le premier paragraphe" rows="8"></textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe2</label>
                                             @if($errors->has('paragraphe2'))
                                             <span class="text-danger">{{$errors->first('paragraphe2')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="paragraphe2" id="productdesc" placeholder="Entrez le second paragraphe" rows="8"></textarea>
+                                            <textarea class="form-control" name="paragraphe2" id="productdesc3" placeholder="Entrez le second paragraphe" rows="8"></textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe3</label>
                                             @if($errors->has('paragraphe3'))
                                             <span class="text-danger">{{$errors->first('paragraphe3')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="paragraphe3" id="productdesc" placeholder="Entrez le troisième paragraphe" rows="8"></textarea>
+                                            <textarea class="form-control" name="paragraphe3" id="productdesc4" placeholder="Entrez le troisième paragraphe" rows="8"></textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc">Paragraphe4</label>
+                                            @if($errors->has('paragraphe4'))
+                                            <span class="text-danger">{{$errors->first('paragraphe4')}}</span>
+                                            @endif
+                                            <textarea class="form-control" minlength="4" maxlength="2000" required name="paragraphe4" id="productdesc5" placeholder="Entrez le quatrième paragraphe" rows="8"></textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc">Paragraphe5</label>
+                                            @if($errors->has('paragraphe5'))
+                                            <span class="text-danger">{{$errors->first('paragraphe5')}}</span>
+                                            @endif
+                                            <textarea class="form-control" minlength="4" maxlength="2000" required name="paragraphe5" id="productdesc6" placeholder="Entrez le cinquième paragraphe" rows="8"></textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc">Paragraphe6</label>
+                                            @if($errors->has('paragraphe6'))
+                                            <span class="text-danger">{{$errors->first('paragraphe6')}}</span>
+                                            @endif
+                                            <textarea class="form-control" minlength="4" maxlength="2000" required name="paragraphe6" id="productdesc7" placeholder="Entrez le sixième paragraphe" rows="8"></textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc">Paragraphe7</label>
+                                            @if($errors->has('paragraphe7'))
+                                            <span class="text-danger">{{$errors->first('paragraphe7')}}</span>
+                                            @endif
+                                            <textarea class="form-control" minlength="4" maxlength="2000" required name="paragraphe7" id="productdesc8" placeholder="Entrez le septième paragraphe" rows="8"></textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc">Paragraphe8</label>
+                                            @if($errors->has('paragraphe8'))
+                                            <span class="text-danger">{{$errors->first('paragraphe8')}}</span>
+                                            @endif
+                                            <textarea class="form-control" minlength="4" maxlength="2000" required name="paragraphe8" id="productdesc9" placeholder="Entrez le huitième paragraphe" rows="8"></textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc">Paragraphe9</label>
+                                            @if($errors->has('paragraphe9'))
+                                            <span class="text-danger">{{$errors->first('paragraphe9')}}</span>
+                                            @endif
+                                            <textarea class="form-control" minlength="4" maxlength="2000" required name="paragraphe9" id="productdesc10" placeholder="Entrez le neuvième paragraphe" rows="8"></textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc">Paragraphe10</label>
+                                            @if($errors->has('paragraphe10'))
+                                            <span class="text-danger">{{$errors->first('paragraphe10')}}</span>
+                                            @endif
+                                            <textarea class="form-control" minlength="4" maxlength="2000" required  name="paragraphe10" id="productdesc11" placeholder="Entrez le dixième paragraphe" rows="8"></textarea>
                                         </div>
 
                                         <div class="border-0 mb-4">

@@ -52,7 +52,13 @@ class CreatController extends Controller
         $my_article->paragraphe1 = $request->paragraphe1;
         $my_article->paragraphe2 = $request->paragraphe2;
         $my_article->paragraphe3 = $request->paragraphe3;
-
+        $my_article->paragraphe4 = $request->paragraphe4;
+        $my_article->paragraphe5 = $request->paragraphe5;
+        $my_article->paragraphe6 = $request->paragraphe6;
+        $my_article->paragraphe7 = $request->paragraphe7;
+        $my_article->paragraphe8 = $request->paragraphe8;
+        $my_article->paragraphe9 = $request->paragraphe9;
+        $my_article->paragraphe10 = $request->paragraphe10;
 
         $my_article->save();
 

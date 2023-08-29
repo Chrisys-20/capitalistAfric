@@ -152,9 +152,9 @@
                                             @endif
 
                                             @if($prinList->status=="activé")
-                                            <td><span class="badge badge-soft-success mb-0" >activé</span></td>
+                                            <td><span class="badge badge-soft-success mb-0" >Activé</span></td>
                                             @else
-                                            <td><span class="badge badge-soft-danger mb-0" >désactivé</span></td>
+                                            <td><span class="badge badge-soft-danger mb-0" >Désactivé</span></td>
                                             @endif
                                             
                                             
