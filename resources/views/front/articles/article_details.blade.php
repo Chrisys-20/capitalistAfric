@@ -116,7 +116,7 @@
                                     </div>
 
                                     <div class="binduz-er-quote-text ">
-                                        <p style="text-align: justify;">Lining concealed back zip fasten swing style high waisted double layer full pattern floral creating your app package.</p>
+                                        <p style="text-align: justify;">{{$monArticle[0]->blockote}}</p>
                                         <span>Par <span>Capitalist Africa</span></span>
 
                                     </div>
@@ -135,12 +135,30 @@
                                     <div class="binduz-er-text pt-50 text-justify">
                                         <p style="text-align: justify;">{{$monArticle[0]->paragraphe4}}</p>
                                     </div>
+                                    <div class="binduz-er-text pt-50 text-justify">
+                                        <p style="text-align: justify;">{{$monArticle[0]->paragraphe5}}</p>
+                                    </div>
+                                    <div class="binduz-er-text pt-50 text-justify">
+                                        <p style="text-align: justify;">{{$monArticle[0]->paragraphe6}}</p>
+                                    </div>
+                                    <div class="binduz-er-text pt-50 text-justify">
+                                        <p style="text-align: justify;">{{$monArticle[0]->paragraphe7}}</p>
+                                    </div>
+                                    <div class="binduz-er-text pt-50 text-justify">
+                                        <p style="text-align: justify;">{{$monArticle[0]->paragraphe8}}</p>
+                                    </div>
+                                    <div class="binduz-er-text pt-50 text-justify">
+                                        <p style="text-align: justify;">{{$monArticle[0]->paragraphe9}}</p>
+                                    </div>
+                                    <div class="binduz-er-text pt-50 text-justify">
+                                        <p style="text-align: justify;">{{$monArticle[0]->paragraphe10}}</p>
+                                    </div>
 
-                                    <div class="binduz-er-text mt-50 mb-50">
+                                    <!-- <div class="binduz-er-text mt-50 mb-50">
                                         <h3 class="binduz-er-title">Working Process</h3>
                                         <p>Are looking beyond ideation stage to, at the very least, beta, and for companies that are corporate-ready. Retailers want to see it all, so they usually have not precisely identified one tech they want to focus on. Visual search and fit-tech are definitely trends.</p>
                                         <p>He gave the example of a plumber sending an invoice, and how they can tell if someone starts to create an invoice and can’t make it through the whole process. For a small business entrepreneur, “that’s a big deal because that means they’re not going to get paid, which means that tuition payment for their kid in college may be in jeopardy. So we take that really, really seriously.”</p>
-                                    </div>
+                                    </div> -->
 
                                     <div class="binduz-er-footer-add-item text-center pt-55">
                                         <!-- <span class="binduz-er-mb-10 d-inline-block">ADVERTISEMENT</span> -->

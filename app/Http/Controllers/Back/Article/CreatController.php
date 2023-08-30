@@ -18,12 +18,13 @@ class CreatController extends Controller
     }
 
     public function store(Request $request){
+        // dd($request->all());
 
         $incomingFields=$request->validate([
 
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'categorie'=>['required','min:2','max:10'],
-            'title'=>['required','min:4','max:500'],
+            'title'=>['required','max:500'],
             'paragraphe1'=>['required','min:4','max:2000'],
             'paragraphe2'=>['required','min:4','max:2000'],
             'paragraphe3'=>['required','min:4','max:2000'],

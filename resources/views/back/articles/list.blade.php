@@ -229,7 +229,7 @@
                 <div class="col-sm-6">
                     <script>
                         document.write(new Date().getFullYear())
-                    </script> © All right reserved By CAPITALIST AFRICA.
+                    </script> © All right reserved By <span style="color: #a916a9;"><Strong>CAPITALIST AFRICA</Strong></span>.
                 </div>
                 <div class="col-sm-6">
                     <div class="text-sm-end d-none d-sm-block">
