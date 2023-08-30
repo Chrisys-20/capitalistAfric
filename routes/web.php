@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Back\Article\CreatController;
 use App\Http\Controllers\Back\Article\ListController;
-use App\Http\Controllers\Back\Article\NewsletterController;
+use App\Http\Controllers\Back\Newsletter\NewsletterController;
 use App\Http\Controllers\Back\DashbController;
 use App\Http\Controllers\Front\ArticleController;
 use App\Http\Controllers\Front\ContactController;
@@ -29,10 +29,13 @@ Route::get('/', function () {
 
 Route::prefix('accueil')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('front.home');
+    Route::post('/newsletter', [HomeController::class, 'newsLetter'])->name('front.newsletter');
     Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
     // NB:les separateur en underscore ne fonctionnent pas
     Route::get('/article/{categorie}%{ref}%', [ArticleController::class, 'index'])->name('article.details');
+    
+    
 
     
 });

@@ -24,9 +24,22 @@ class HomeController extends Controller
         ->where('status','activé')
         ->limit(10)
         ->get();
+
      
         return view('front.home',['categories'=>$categories,'lastPublication'=>$lastPublication,'publication'=>$publication]);
     }
+
+    public function newsLetter(Request $request){
+
+        $categories=DB::table('newsletter')
+        ->insert([
+            'email'=>$request->email
+        ]);
+
+        return back();
+    }
+
+
 
 
 

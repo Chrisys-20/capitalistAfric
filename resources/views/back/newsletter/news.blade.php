@@ -36,33 +36,32 @@
                                         <tr>
                                             <th scope="col" class="ps-4" style="width: 50px;">
                                                 <div class="form-check font-size-16">
-                                                    <input type="checkbox" class="form-check-input" id="contacusercheck">
                                                     <label class="form-check-label" for="contacusercheck"></label>
                                                 </div>
                                             </th>
                                             <th scope="col">#</th>
-                                            <th scope="col" style="width: 0px;">Nom</th>
                                             <th scope="col">Email</th>
+                                            <th scope="col">Date de souscription</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
+                                        @foreach($allEmail as $listEmail)
                                         <tr>
                                             <th scope="row" class="ps-4">
                                                 <div class="form-check font-size-16">
-                                                    <input type="checkbox" class="form-check-input" id="contacusercheck1">
                                                     <label class="form-check-label" for="contacusercheck1"></label>
                                                 </div>
                                             </th>
                                             <td>
-                                                <a href="#" class="text-body">1</a>
+                                                <a href="#" class="text-body">{{$loop->index}}</a>
                                             </td>
+                                            <td>{{$listEmail->email}}</td>
                                             <td>
-                                                <a href="#" class="text-body">Douglas</a>
+                                                <a href="#" class="text-body">{{$listEmail->created_at}}</a>
                                             </td>
-                                            <td>douglas@gmail.com</td>
                                         </tr>
-
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

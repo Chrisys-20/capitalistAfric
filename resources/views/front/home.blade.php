@@ -57,7 +57,11 @@
                         @if($mycategorie->priority=="principale")
                         <div class="binduz-er-news-viewed-most">
                             <div class="binduz-er-thumb">
-                                <img src="{{asset('capitalistAf/assets/images/journee_traite.jpg')}}" alt="">
+                                @if($mycategorie->image)
+                                <img src="{{$mycategorie->image}}" width="574px" height="574px" alt="">
+                                @else
+                                <img src="{{asset('capitalistAf/assets/images/journee_traite.jpg')}}" width="574px" height="574px" alt="">
+                                @endif
                             </div>
                             <div class="binduz-er-content">
                                 <div class="binduz-er-meta-item">
@@ -161,7 +165,11 @@
                                                     @if($mycategorie->categorie=="fi")
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
+                                                            @if($mycategorie->image)
+                                                            <img src="{{$mycategorie->image}}" width="116px" height="100px" alt="">
+                                                            @else
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" width="116px" height="100px" alt="">
+                                                            @endif
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -213,7 +221,11 @@
                                                     @if($mycategorie->categorie=="po")
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
+                                                            @if($mycategorie->image)
+                                                            <img src="{{$mycategorie->image}}" width="116px" height="100px" alt="">
+                                                            @else
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" width="116px" height="100px" alt="">
+                                                            @endif
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -225,7 +237,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
-                                                            <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
+                                                                <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -265,7 +277,11 @@
                                                     @if($mycategorie->categorie=="po")
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" alt="">
+                                                            @if($mycategorie->image)
+                                                            <img src="{{$mycategorie->image}}" width="116px" height="100px" alt="">
+                                                            @else
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" width="116px" height="100px" alt="">
+                                                            @endif
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -277,7 +293,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
-                                                            <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
+                                                                <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -317,7 +333,11 @@
                                                     @if($mycategorie->categorie=="po")
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" alt="">
+                                                            @if($mycategorie->image)
+                                                            <img src="{{$mycategorie->image}}" width="116px" height="100px" alt="">
+                                                            @else
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" width="116px" height="100px" alt="">
+                                                            @endif
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -329,7 +349,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
-                                                            <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
+                                                                <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -368,7 +388,11 @@
                                                     @if($mycategorie->categorie=="po")
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" alt="">
+                                                            @if($mycategorie->image)
+                                                            <img src="{{$mycategorie->image}}" width="116px" height="100px" alt="">
+                                                            @else
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" width="116px" height="100px" alt="">
+                                                            @endif
                                                         </div>
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
@@ -380,7 +404,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
-                                                            <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
+                                                                <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -404,7 +428,11 @@
                             @foreach($lastPublication as $malist)
                             <div class="binduz-er-sidebar-latest-post-item">
                                 <div class="binduz-er-thumb">
-                                    <img src="{{asset('capitalistAf/assets/images/latest-post-4.jpg')}}" alt="latest">
+                                    @if($malist->image)
+                                    <img src="{{$mycategorie->image}}" width="574px" height="574px" alt="">
+                                    @else
+                                    <img src="{{asset('capitalistAf/assets/images/latest-post-4.jpg')}}" width="80px" height="80px" alt="">
+                                    @endif
                                 </div>
                                 <div class="binduz-er-content">
                                     <span><i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>
@@ -551,7 +579,11 @@
                             <div class="binduz-er-main-posts-item">
                                 <div class="binduz-er-trending-news-list-box">
                                     <div class="binduz-er-thumb">
-                                        <img src="{{asset('capitalistAf/assets/images/main-post-thumb-3.jpg')}}" alt="">
+                                        @if($malist->image)
+                                        <img src="{{$malist->image}}" width="322px" height="216px" alt="">
+                                        @else
+                                        <img src="" alt="Vous avez oublié d'ajouter l'image">
+                                        @endif
                                     </div>
                                     <div class="binduz-er-content">
                                         <div class="binduz-er-meta-item">
@@ -573,7 +605,7 @@
                                             </div>
                                         </div>
                                         <div class="binduz-er-trending-news-list-title">
-                                        <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$malist->ref,'categorie'=>$malist->categorie])}}">{{$malist->title}}</a></h4>
+                                            <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$malist->ref,'categorie'=>$malist->categorie])}}">{{$malist->title}}</a></h4>
                                             <p>{{$malist->paragraphe1}}</p>
                                         </div>
                                     </div>
@@ -585,15 +617,20 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="binduz-er-populer-news-sidebar-newsletter mt-40">
-                        <div class="binduz-er-newsletter-box text-center">
-                            <img src="assets/images/icon/icon-3.png" alt="">
-                            <h3 class="binduz-er-title"> Newsletter</h3>
-                            <p>L'info à votre porté.</p>
-                            <div class="binduz-er-input-box">
-                                <input type="text" placeholder="Votre adresse mail">
-                                <button><i class="fal fa-long-arrow-right"></i></button>
+                        <form action="{{route('front.newsletter')}}" method="post">
+                            @csrf
+                            <div class="binduz-er-newsletter-box text-center">
+                                <img src="assets/images/icon/icon-3.png" alt="">
+                                <h3 class="binduz-er-title"> Newsletter</h3>
+                                <p>L'info à votre porté.</p>
+                                <div class="binduz-er-input-box">
+                                    <input type="text" name="email" placeholder="Votre adresse mail">
+                                </div>
+                                <div class="binduz-er-input-box " style="padding-top: 7px;margin-top: 14px;">
+                                    <button type="submit" style="color: white;margin-right: 42px;"><i class="fal fa-long-arrow-right"></i> Souscrire</button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <!-- <div class="binduz-er-sidebar-latest-post">
                         <div class="binduz-er-sidebar-title">

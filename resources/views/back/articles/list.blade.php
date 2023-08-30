@@ -37,7 +37,7 @@
                                         <tr>
                                             <th scope="col" class="ps-4" style="width: 50px;">
                                                 <div class="form-check font-size-16">
-                                                    <input type="checkbox" class="form-check-input" id="contacusercheck">
+                                                    #
                                                     <label class="form-check-label" for="contacusercheck"></label>
                                                 </div>
                                             </th>
@@ -56,7 +56,8 @@
                                         <tr>
                                             <th scope="row" class="ps-4">
                                                 <div class="form-check font-size-16">
-                                                    <input type="checkbox" class="form-check-input" id="contacusercheck1">
+                                                {{$loop->index}}
+
                                                     <label class="form-check-label" for="contacusercheck1"></label>
                                                 </div>
                                             </th>

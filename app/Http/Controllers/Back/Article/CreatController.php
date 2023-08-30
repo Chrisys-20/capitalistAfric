@@ -38,7 +38,7 @@ class CreatController extends Controller
         }while (!empty($find_ref));
 
         $image_path = "images/article/image_".$ref.'.'.$request->file('image')->getClientOriginalExtension();
-        $request->file('image')->move(public_path(),$image_path);
+        $request->file('image')->move(public_path(),'images/article',$image_path);
         
         //die(var_dump('yes'));
 
