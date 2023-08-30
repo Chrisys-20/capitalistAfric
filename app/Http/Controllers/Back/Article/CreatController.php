@@ -31,7 +31,7 @@ class CreatController extends Controller
         ]);
 
         // die(var_dump($request->all()));
-        //dd($request->all());
+        dd($request->all());
 
         do {
             $ref='Article_'.(new  Fonction())->genUniqueID('22');
@@ -98,6 +98,74 @@ class CreatController extends Controller
         // return back()->withSucess('Article crée!!');
         // return view('dashboard.articles.create',['ad_user'=>$ad_user]);
         return back()->with(['message'=>'Article crée avec success']);
+    }
+
+    public function edit($ref){
+
+        $article= DB::table('articles')
+        ->where('ref', $ref)
+        ->get();
+       // dd( $article);
+        return view('back.articles.edit',['article'=>$article]);
+    }
+
+    public function update($refarticle, Request $request){
+        
+        $incomingFields=$request->validate([
+
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'categorie'=>['required','min:2','max:10'],
+            'title'=>['required','max:500'],
+            'paragraphe1'=>['required','min:4','max:2000'],
+            'paragraphe2'=>['required','min:4','max:2000'],
+            'paragraphe3'=>['required','min:4','max:2000'],
+        ]);
+        
+
+        // die(var_dump($request->all()));
+        //dd($request->all());
+  
+        do {
+            $ref='Article_'.(new  Fonction())->genUniqueID('22');
+            $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
+        }while (!empty($find_ref));
+
+        $image_path = "images/article/image_".$ref.'.'.$request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(public_path(),'images/article',$image_path);
+        
+       // dd($refarticle);
+
+
+        DB::table('articles')
+        ->where('ref', $refarticle)
+        ->update([
+            'title'=>$request->title,
+            'categorie'=>$request->categorie,
+            'image'=>$image_path,
+            'blockote'=>$request->blockote,
+            'paragraphe1'=> $request->paragraphe1,
+            'paragraphe2'=> $request->paragraphe2,
+            'paragraphe3'=> $request->paragraphe3,
+            'paragraphe4'=> $request->paragraphe4,
+            'paragraphe5'=> $request->paragraphe5,
+            'paragraphe6'=> $request->paragraphe6,
+            'paragraphe7'=> $request->paragraphe7,
+            'paragraphe8'=> $request->paragraphe8,
+            'paragraphe9'=> $request->paragraphe9,
+            'paragraphe10'=> $request->paragraphe10,
+        ]);
+
+        return redirect()->route('article.list');
+    }
+
+    public function delete($refarticle, Request $request){
+        
+
+        DB::table('articles')
+        ->where('ref', $refarticle)
+        ->delete();
+
+        return redirect()->route('article.list');
     }
 
 }

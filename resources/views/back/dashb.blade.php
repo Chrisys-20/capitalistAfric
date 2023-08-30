@@ -111,7 +111,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="mb-4">
-                                <h5 class="card-title">Les grands titres <span class="text-muted fw-normal ms-2">(834)</span></h5>
+                                <h5 class="card-title"> LES GRANDS TITRES <span class="text-muted fw-normal ms-2">(834)</span></h5>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-nowrap align-middle">
@@ -135,7 +135,7 @@
 
                                         <tr>
                                             <th scope="row" class="ps-4">
-                                            {{$loop->index}}
+                                            {{$loop->index+1}}
                                             </th>
                                             <td>
                                                 <!-- <img src="dashboard/asset{{$prinList->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2"> -->

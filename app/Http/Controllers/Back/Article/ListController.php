@@ -14,14 +14,18 @@ class ListController extends Controller
 
         $articleList=DB::table('articles')
         ->get();
+        $totalearticle=DB::table('articles')
+        ->get()->count();
 
-        return view('back.articles.list',['articleList'=>$articleList]);
+        //dd($totalearticle);
+
+        return view('back.articles.list',['articleList'=>$articleList,'totalearticle'=>$totalearticle]);
     }
 
 
     public function active($ref){
 
-        $rounds = DB::table('articles')
+        DB::table('articles')
         ->where('ref', $ref)
         ->update(['status' => 'activé']);
 
@@ -30,7 +34,7 @@ class ListController extends Controller
 
     public function desactive($ref){
 
-        $rounds = DB::table('articles')
+        DB::table('articles')
         ->where('ref', $ref)
         ->update(['status' => 'déactivé']);
 
@@ -39,7 +43,7 @@ class ListController extends Controller
 
     public function priority($ref){
 
-        $rounds = DB::table('articles')
+         DB::table('articles')
         ->where('ref', $ref)
         ->update(['priority' => 'principale']);
 

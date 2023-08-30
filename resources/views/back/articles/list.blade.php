@@ -9,7 +9,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="mb-3">
-                        <h5 class="card-title">Ma liste <span class="text-muted fw-normal ms-2">(834)</span></h5>
+                        <h5 class="card-title">Tous les Articles <span class="text-muted fw-normal ms-2"><strong style="color:purple">({{$totalearticle}})</strong> </span></h5>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                                         <tr>
                                             <th scope="row" class="ps-4">
                                                 <div class="form-check font-size-16">
-                                                {{$loop->index}}
+                                                {{$loop->index+1}}
 
                                                     <label class="form-check-label" for="contacusercheck1"></label>
                                                 </div>
@@ -93,10 +93,10 @@
                                             <td>
                                                 <ul class="list-inline mb-0">
                                                     <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
+                                                        <a href="{{route('article.edit',['ref'=>$List->ref])}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
                                                     </li>
                                                     <li class="list-inline-item">
-                                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
+                                                        <a href="{{route('article.delete',['ref'=>$List->ref])}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
                                                     </li>
                                                     <li class="list-inline-item dropdown">
                                                         <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">

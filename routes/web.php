@@ -49,7 +49,9 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     
     Route::get('/create',[CreatController::class,'index'])->name('article.create');
     Route::post('/store',[CreatController::class,'store'])->name('article.store');
-    Route::get('/edit',[CreatController::class,'edit'])->name('article.edit');
+    Route::get('/edit/{ref}',[CreatController::class,'edit'])->name('article.edit');
+    Route::post('/edit/{ref}/update',[CreatController::class,'update'])->name('article.update');
+    Route::get('/edit/{ref}/delete',[CreatController::class,'delete'])->name('article.delete');
 
 
 
