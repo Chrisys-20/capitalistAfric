@@ -29,7 +29,6 @@ class CreatController extends Controller
             'title'=>['required','max:500'],
             'paragraphe1'=>['required'],
             'paragraphe2'=>['required'],
-            'paragraphe3'=>['required'],
         ]);
 
         // die(var_dump($request->all()));
@@ -64,7 +63,7 @@ class CreatController extends Controller
         $my_article->paragraphe9 = $request->paragraphe9;
         $my_article->paragraphe10 = $request->paragraphe10;
 
-        dd($my_article);
+       // dd($my_article);
 
         $my_article->save();
 

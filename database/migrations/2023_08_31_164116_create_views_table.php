@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('views', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->string('ipadresse')->nullable();
+            $table->integer('id_articles');
+            $table->string('ipadresse')->nullable();    
             $table->timestamps();
         });
     }

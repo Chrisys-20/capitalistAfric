@@ -97,7 +97,7 @@
                                             @if($errors->has('paragraphe3'))
                                             <span class="text-danger">{{$errors->first('paragraphe3')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="paragraphe3"  required id="productdesc4" placeholder="Entrez le troisième paragraphe" rows="8"></textarea>
+                                            <textarea class="form-control" name="paragraphe3"   id="productdesc4" placeholder="Entrez le troisième paragraphe" rows="8"></textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe4</label>

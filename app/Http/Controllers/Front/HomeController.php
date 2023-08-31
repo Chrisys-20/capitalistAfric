@@ -59,7 +59,7 @@ class HomeController extends Controller
 
     public function newsLetter(Request $request){
 
-        $categories=DB::table('newsletter')
+        $categories=DB::table('newsletters')
         ->insert([
             'email'=>$request->email
         ]);

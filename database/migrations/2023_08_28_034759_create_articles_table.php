@@ -16,8 +16,6 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('ref')->nullable();
             $table->string('title')->nullable();
-            $table->string('description')->nullable();
-            $table->string('baniere')->nullable();
             $table->string('image')->nullable();
             $table->string('categorie')->nullable();
             $table->string('blockote')->nullable();
@@ -25,6 +23,13 @@ return new class extends Migration
             $table->string('paragraphe2')->nullable();
             $table->string('paragraphe3')->nullable();
             $table->string('paragraphe4')->nullable();
+            $table->string('paragraphe5')->nullable();
+            $table->string('paragraphe6')->nullable();
+            $table->string('paragraphe7')->nullable();
+            $table->string('paragraphe8')->nullable();
+            $table->string('paragraphe9')->nullable();
+            $table->string('paragraphe10')->nullable();
+            $table->string('priority')->default('simple');
             $table->string('view')->nullable();
             $table->timestamps();
         });
