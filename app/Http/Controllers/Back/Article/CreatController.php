@@ -40,7 +40,7 @@ class CreatController extends Controller
             $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
         }while (!empty($find_ref));
 
-        $image_path = "images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
+        $image_path = "public/images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
         $request->file('image')->move(public_path('images/article'),$image_path);
         
         //die(var_dump('yes'));
@@ -63,6 +63,8 @@ class CreatController extends Controller
         $my_article->paragraphe8 = $request->paragraphe8;
         $my_article->paragraphe9 = $request->paragraphe9;
         $my_article->paragraphe10 = $request->paragraphe10;
+
+        dd($my_article);
 
         $my_article->save();
 
@@ -134,7 +136,7 @@ class CreatController extends Controller
             $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
         }while (!empty($find_ref));
 
-        $image_path = "images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
+        $image_path = "public/images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
         $request->file('image')->move(public_path('images/article'),$image_path);
         
        // dd($refarticle);
