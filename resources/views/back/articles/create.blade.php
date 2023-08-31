@@ -72,6 +72,13 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc3">Citation</label>
+                                            @if($errors->has('blockote'))
+                                            <span class="text-danger">{{$errors->first('blockote')}}</span>
+                                            @endif
+                                            <textarea class="form-control" name="blockote" required id="productdesc2" placeholder="Entrez le premier paragraphe" rows="8"></textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc3">Paragraphe1</label>
                                             @if($errors->has('paragraphe1'))
                                             <span class="text-danger">{{$errors->first('paragraphe1')}}</span>

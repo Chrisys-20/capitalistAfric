@@ -79,7 +79,7 @@
                                         @endif
                                     </div>
                                     <div class="binduz-er-meta-date">
-                                        <span><i class="fal fa-calendar-alt"></i> 23 Août 2023</span>
+                                        <span><i class="fal fa-calendar-alt"></i> {{$mycategorie->updated_at}}</span>
                                     </div>
                                 </div>
                                 <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$mycategorie->title}}</a></h4>
@@ -443,7 +443,17 @@
                                     <div class="binduz-er-meta-item">
                                         <div class="binduz-er-meta-categories">
                                             <div class="binduz-er-meta-item">
+                                                @if($malist->categorie=="fi")
+                                                <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Finances</a>
+                                                @elseif($malist->categorie=="po")
+                                                <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Politiques</a>
+                                                @elseif($malist->categorie=="id")
+                                                <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Industries</a>
+                                                @elseif($malist->categorie=="an")
                                                 <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Analyses</a>
+                                                @else
+                                                <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Bourse</a>
+                                                @endif
                                             </div>
                                             <div class="binduz-er-meta-date">
                                                 <span><i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>

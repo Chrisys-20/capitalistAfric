@@ -9,16 +9,20 @@ use Illuminate\Support\Facades\DB;
 class DashbController extends Controller
 {
     //
-    public function index(){
 
-        $articleList=DB::table('articles')
-        ->get();
+    //
+    public function index()
+    {
 
-        $principaleArticle=DB::table('articles')
-        ->where('priority', "principale")
-        ->get();
+       
+        $articleList = DB::table('articles')
+            ->get();
+
+        $principaleArticle = DB::table('articles')
+            ->where('priority', "principale")
+            ->get();
 
 
-        return view('back.dashb',['articleList'=>$articleList, 'principaleArticle'=>$principaleArticle]);
+        return view('back.dashb', ['articleList' => $articleList, 'principaleArticle' => $principaleArticle]);
     }
 }

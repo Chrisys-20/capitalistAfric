@@ -21,8 +21,8 @@
                                         @endif -->
 
                                         <div class="flex-grow-1 overflow-hidden">
-                                            <h5 class="font-size-16 mb-1">Entrez les informations</h5>
-                                            <p class="text-muted text-truncate mb-0">dans le formulaire suivant</p>
+                                            <h5 class="font-size-16 mb-1">Rééditer le formulaire suivant</h5>
+                                            <p class="text-muted text-truncate mb-0"><span style="color: red;">NB: (Vous devez de nouveau sélectioner une image.)</span></p>
                                         </div>
 
 
