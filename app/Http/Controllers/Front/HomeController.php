@@ -15,18 +15,23 @@ class HomeController extends Controller
         ->where('status','activé')
         ->get();
 
+        $categoriesOff=DB::table('articles')
+        ->where('status','activé')
+        ->get();
+
         $lastPublication=DB::table('articles')
         ->where('status','activé')
         ->limit(10)
         ->get();
+       //dd( $categoriesOff);
 
         $publication=DB::table('articles')
         ->where('status','activé')
         ->limit(10)
         ->get();
 
-     
-        return view('front.home',['categories'=>$categories,'lastPublication'=>$lastPublication,'publication'=>$publication]);
+       //dd($categoriesOff);
+        return view('front.home',['categories'=>$categories,'categOff'=>$categoriesOff,'lastPublication'=>$lastPublication,'publication'=>$publication]);
     }
 
     public function newsLetter(Request $request){

@@ -8,6 +8,8 @@ use App\Models\Article;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+Use Alert;
+
 
 class CreatController extends Controller
 {
@@ -31,15 +33,15 @@ class CreatController extends Controller
         ]);
 
         // die(var_dump($request->all()));
-        dd($request->all());
+        //dd($request->all());
 
         do {
             $ref='Article_'.(new  Fonction())->genUniqueID('22');
             $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
         }while (!empty($find_ref));
 
-        $image_path = "images/article/image_".$ref.'.'.$request->file('image')->getClientOriginalExtension();
-        $request->file('image')->move(public_path(),'images/article',$image_path);
+        $image_path = "images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(public_path('images/article'),$image_path);
         
         //die(var_dump('yes'));
 
@@ -97,7 +99,9 @@ class CreatController extends Controller
 
         // return back()->withSucess('Article crée!!');
         // return view('dashboard.articles.create',['ad_user'=>$ad_user]);
-        return back()->with(['message'=>'Article crée avec success']);
+       
+        // return back()->with(['success'=>'Article crée avec success']);
+        return back()->with('message','Article crée avec success');
     }
 
     public function edit($ref){
@@ -113,7 +117,7 @@ class CreatController extends Controller
         
         $incomingFields=$request->validate([
 
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'categorie'=>['required','min:2','max:10'],
             'title'=>['required','max:500'],
             'paragraphe1'=>['required','min:4','max:2000'],
@@ -130,8 +134,8 @@ class CreatController extends Controller
             $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
         }while (!empty($find_ref));
 
-        $image_path = "images/article/image_".$ref.'.'.$request->file('image')->getClientOriginalExtension();
-        $request->file('image')->move(public_path(),'images/article',$image_path);
+        $image_path = "images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(public_path('images/article'),$image_path);
         
        // dd($refarticle);
 
@@ -155,11 +159,15 @@ class CreatController extends Controller
             'paragraphe10'=> $request->paragraphe10,
         ]);
 
-        return redirect()->route('article.list');
+        // return redirect()->route('article.list')->with('message','Article crée avec success');;
+        return back()->with('message','Article mis à jour avec success');;
     }
 
     public function delete($refarticle, Request $request){
         
+        //  $title = 'Supprimer l\'article!';
+        //  $text = "Voulez vous vraiment supprimer?";
+        // Alert::confirmDelete($title, $text);
 
         DB::table('articles')
         ->where('ref', $refarticle)

@@ -103,9 +103,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 col-md-12">
-                    <!-- <div class="binduz-er-add pt-10 pb-20">
-                        <img src="{{asset('capitalistAf/assets/images/space-thumb.jpg')}}" alt="">
-                    </div> -->
                     <div class="binduz-er-trending-news-topbar d-block d-md-flex justify-content-between align-items-center">
                         <div class="binduz-er-trending-box">
                             <div class="binduz-er-title">
@@ -119,7 +116,7 @@
                                     <a class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">Finances</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">Politiques</a>
+                                    <a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">Politique</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link" id="pills-3-tab" data-bs-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">Industries</a>
@@ -148,6 +145,9 @@
                                                                 <div class="binduz-er-meta-categories">
                                                                     <a href="#">Finances</a>
                                                                 </div>
+                                                                <!-- <div class="binduz-er-meta-date">
+                                                                    <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                                </div> -->
                                                                 <div class="binduz-er-trending-news-title">
                                                                     <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
                                                                 </div>
@@ -160,7 +160,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-5 col-md-6">
-                                                <div class="binduz-er-trending-news-list-item   " style="overflow-y: auto; height: 420px;">
+                                                <div class="binduz-er-trending-news-list-item" style="overflow-y: auto; height: 420px;">
                                                     @foreach($categories as $mycategorie)
                                                     @if($mycategorie->categorie=="fi")
                                                     <div class="binduz-er-trending-news-list-box">
@@ -187,7 +187,6 @@
                                                     </div>
                                                     @endif
                                                     @endforeach
-
                                                 </div>
                                             </div>
                                         </div>
@@ -203,7 +202,9 @@
                                                                 <div class="binduz-er-meta-categories">
                                                                     <a href="#">Politique</a>
                                                                 </div>
-
+                                                                <!-- <div class="binduz-er-meta-date">
+                                                                    <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                                </div> -->
                                                                 <div class="binduz-er-trending-news-title">
                                                                     <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
                                                                 </div>
@@ -230,10 +231,10 @@
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
                                                                 <div class="binduz-er-meta-categories">
-                                                                    <a href="#">Politiques</a>
+                                                                    <a href="#">Politique</a>
                                                                 </div>
                                                                 <div class="binduz-er-meta-date">
-                                                                    <span><i class="fal fa-calendar-alt"></i>{{$mycategorie->updated_at}}</span>
+                                                                    <span><i class="fal fa-calendar-alt"></i> {{$mycategorie->updated_at}}</span>
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
@@ -241,10 +242,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
+                                                    @endif
+                                                    @endforeach
                                                 </div>
-                                                @endif
-                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -253,20 +253,22 @@
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
                                                     <div class="binduz-er-trending-news-item">
-                                                        <img src="{{asset('capitalistAf/assets/images/news-slider-3.jpg')}}" alt="">
+                                                        <img src="{{asset('capitalistAf/assets/images/news-slider-2.jpg')}}" alt="">
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
                                                                     <a href="#">Industries</a>
                                                                 </div>
-
+                                                                <!-- <div class="binduz-er-meta-date">
+                                                                    <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                                </div> -->
                                                                 <div class="binduz-er-trending-news-title">
                                                                     <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
                                                                 </div>
                                                             </div>
-                                                            <div class="binduz-er-news-share">
+                                                            <!-- <div class="binduz-er-news-share">
                                                                 <a href="#"><i class="fal fa-share"></i></a>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -274,13 +276,13 @@
                                             <div class="col-lg-5 col-md-6">
                                                 <div class="binduz-er-trending-news-list-item" style="overflow-y: auto; height: 420px;">
                                                     @foreach($categories as $mycategorie)
-                                                    @if($mycategorie->categorie=="po")
+                                                    @if($mycategorie->categorie=="id")
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
                                                             @if($mycategorie->image)
                                                             <img src="{{$mycategorie->image}}" width="116px" height="100px" alt="">
                                                             @else
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" width="116px" height="100px" alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" width="116px" height="100px" alt="">
                                                             @endif
                                                         </div>
                                                         <div class="binduz-er-content">
@@ -289,7 +291,7 @@
                                                                     <a href="#">Industries</a>
                                                                 </div>
                                                                 <div class="binduz-er-meta-date">
-                                                                    <span><i class="fal fa-calendar-alt"></i>{{$mycategorie->updated_at}}</span>
+                                                                    <span><i class="fal fa-calendar-alt"></i> {{$mycategorie->updated_at}}</span>
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
@@ -297,10 +299,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
+                                                    @endif
+                                                    @endforeach
                                                 </div>
-                                                @endif
-                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -309,20 +310,22 @@
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
                                                     <div class="binduz-er-trending-news-item">
-                                                        <img src="{{asset('capitalistAf/assets/images/news-slider-2.jpg')}}" alt="">
+                                                        <img src="{{asset('capitalistAf/assets/images/trending-thumb.png')}}" alt="">
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
                                                                     <a href="#">Bourse</a>
                                                                 </div>
-
+                                                                <!-- <div class="binduz-er-meta-date">
+                                                                    <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                                </div> -->
                                                                 <div class="binduz-er-trending-news-title">
                                                                     <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
                                                                 </div>
                                                             </div>
-                                                            <div class="binduz-er-news-share">
+                                                            <!-- <div class="binduz-er-news-share">
                                                                 <a href="#"><i class="fal fa-share"></i></a>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -330,13 +333,13 @@
                                             <div class="col-lg-5 col-md-6">
                                                 <div class="binduz-er-trending-news-list-item" style="overflow-y: auto; height: 420px;">
                                                     @foreach($categories as $mycategorie)
-                                                    @if($mycategorie->categorie=="po")
+                                                    @if($mycategorie->categorie=="bo")
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
                                                             @if($mycategorie->image)
                                                             <img src="{{$mycategorie->image}}" width="116px" height="100px" alt="">
                                                             @else
-                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-3.jpg')}}" width="116px" height="100px" alt="">
+                                                            <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" width="116px" height="100px" alt="">
                                                             @endif
                                                         </div>
                                                         <div class="binduz-er-content">
@@ -345,7 +348,7 @@
                                                                     <a href="#">Bourse</a>
                                                                 </div>
                                                                 <div class="binduz-er-meta-date">
-                                                                    <span><i class="fal fa-calendar-alt"></i>{{$mycategorie->updated_at}}</span>
+                                                                    <span><i class="fal fa-calendar-alt"></i> {{$mycategorie->updated_at}}</span>
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
@@ -353,9 +356,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    @endif
+                                                    @endforeach
                                                 </div>
-                                                @endif
-                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -364,20 +367,22 @@
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
                                                     <div class="binduz-er-trending-news-item">
-                                                        <img src="{{asset('capitalistAf/assets/images/trending-thumb.png')}}" alt="">
+                                                        <img src="{{asset('capitalistAf/assets/images/news-slider-2.jpg')}}" alt="">
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
                                                                     <a href="#">Analyses</a>
                                                                 </div>
-
+                                                                <!-- <div class="binduz-er-meta-date">
+                                                                    <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
+                                                                </div> -->
                                                                 <div class="binduz-er-trending-news-title">
                                                                     <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
                                                                 </div>
                                                             </div>
-                                                            <div class="binduz-er-news-share">
+                                                            <!-- <div class="binduz-er-news-share">
                                                                 <a href="#"><i class="fal fa-share"></i></a>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -385,7 +390,7 @@
                                             <div class="col-lg-5 col-md-6">
                                                 <div class="binduz-er-trending-news-list-item" style="overflow-y: auto; height: 420px;">
                                                     @foreach($categories as $mycategorie)
-                                                    @if($mycategorie->categorie=="po")
+                                                    @if($mycategorie->categorie=="an")
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
                                                             @if($mycategorie->image)
@@ -400,7 +405,7 @@
                                                                     <a href="#">Analyses</a>
                                                                 </div>
                                                                 <div class="binduz-er-meta-date">
-                                                                    <span><i class="fal fa-calendar-alt"></i>{{$mycategorie->updated_at}}</span>
+                                                                    <span><i class="fal fa-calendar-alt"></i> {{$mycategorie->updated_at}}</span>
                                                                 </div>
                                                             </div>
                                                             <div class="binduz-er-trending-news-list-title">
@@ -408,9 +413,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    @endif
+                                                    @endforeach
                                                 </div>
-                                                @endif
-                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -420,24 +425,32 @@
                     </div>
                 </div>
                 <div class="  col-lg-3 col-md-12">
-                    <div class="binduz-er-sidebar-categories">
+                    <div class="binduz-er-sidebar-latest-post">
                         <div class="binduz-er-sidebar-title">
-                            <h4 class="binduz-er-title">10 Articles de la semaine dernière</h4>
+                            <h4 class="binduz-er-title">Latest Post</h4>
                         </div>
                         <div class="binduz-er-sidebar-latest-post-box" style="overflow-y: auto; height: 420px;">
                             @foreach($lastPublication as $malist)
                             <div class="binduz-er-sidebar-latest-post-item">
-                                <div class="binduz-er-thumb">
+                                <!-- <div class="binduz-er-thumb">
                                     @if($malist->image)
-                                    <img src="{{$mycategorie->image}}" width="574px" height="574px" alt="">
+                                    <img src="{{$malist->image}}" width="574px" height="574px" alt="">
                                     @else
                                     <img src="{{asset('capitalistAf/assets/images/latest-post-4.jpg')}}" width="80px" height="80px" alt="">
                                     @endif
-                                </div>
+                                </div> -->
                                 <div class="binduz-er-content">
-                                    <span><i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>
-                                    <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$mycategorie->ref,'categorie'=>$mycategorie->categorie])}}">{{$malist->title}}</a></h4>
-                                    </h4>
+                                    <div class="binduz-er-meta-item">
+                                        <div class="binduz-er-meta-categories">
+                                            <div class="binduz-er-meta-item">
+                                                <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Analyses</a>
+                                            </div>
+                                            <div class="binduz-er-meta-date">
+                                                <span><i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$malist->ref,'categorie'=>$malist->categorie])}}">{{$malist->title}}</a></h4>
                                 </div>
                             </div>
                             @endforeach
@@ -445,6 +458,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!--====== BINDUZ TRENDING PART ENDS ======-->

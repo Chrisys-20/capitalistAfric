@@ -173,18 +173,28 @@
                                             <div class="binduz-er-video-post binduz-er-recently-viewed-item">
                                                 <div class="binduz-er-latest-news-item">
                                                     <div class="binduz-er-thumb">
-                                                        <img src="{{asset('capitalistAf/assets/images/editors-pack-thumb-1.jpg')}}" alt="">
+                                                        <img src="assets/images/editors-pack-thumb-1.jpg" alt="">
                                                     </div>
                                                     <div class="binduz-er-content">
                                                         <div class="binduz-er-meta-item">
                                                             <div class="binduz-er-meta-categories">
+                                                                @if($myListe->categorie=="fi")
                                                                 <a href="#">Finances</a>
+                                                                @elseif($myListe->categorie=="po")
+                                                                <a href="#">Politiques</a>
+                                                                @elseif($myListe->categorie=="id")
+                                                                <a href="#">Industries</a>
+                                                                @elseif($myListe->categorie=="an")
+                                                                <a href="#">Analyses</a>
+                                                                @else
+                                                                <a href="#">Bourse</a>
+                                                                @endif
                                                             </div>
                                                             <div class="binduz-er-meta-date">
                                                                 <span><i class="fal fa-calendar-alt"></i>{{$myListe->updated_at}}</span>
                                                             </div>
                                                         </div>
-                                                        <h5 class="binduz-er-title"><a href="#">{{$myListe->title}}</a></h5>
+                                                        <h5 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$myListe->ref,'categorie'=>$myListe->categorie])}}">{{$myListe->title}}</a></h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -203,7 +213,7 @@
                             <div class="binduz-er-popular-news-title">
                                 <ul class="nav nav-pills mb-3" id="pills-tab-2" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Dernières publiés</a>
+                                        <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Dernières publications</a>
                                     </li>
                                     <!-- <li class="nav-item" role="presentation">
                                         <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Most Recent</a>
@@ -213,82 +223,17 @@
                             <div class="tab-content" id="pills-tabContent-2">
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                     <div class="binduz-er-sidebar-latest-post-box">
+                                        @foreach($ArticleDesac as $myListe)
                                         <div class="binduz-er-sidebar-latest-post-item">
                                             <div class="binduz-er-thumb">
-                                                <img src="assets/images/latest-post-4.jpg" alt="latest">
+                                                <img src="{{$myListe->image}}" alt="latest">
                                             </div>
                                             <div class="binduz-er-content">
-                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
-                                                <h4 class="binduz-er-title"><a href="#">Why creating inclusive classrooms matters</a></h4>
+                                                <span><i class="fal fa-calendar-alt"></i> {{$myListe->updated_at}}</span>
+                                                <h4 class="binduz-er-title"><a href="#">{{$myListe->title}}</a></h4>
                                             </div>
                                         </div>
-                                        <div class="binduz-er-sidebar-latest-post-item">
-                                            <div class="binduz-er-thumb">
-                                                <img src="assets/images/latest-post-4.jpg" alt="latest">
-                                            </div>
-                                            <div class="binduz-er-content">
-                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
-                                                <h4 class="binduz-er-title"><a href="#">Celebrating Asian Pacific American art and</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="binduz-er-sidebar-latest-post-item">
-                                            <div class="binduz-er-thumb">
-                                                <img src="assets/images/latest-post-4.jpg" alt="latest">
-                                            </div>
-                                            <div class="binduz-er-content">
-                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
-                                                <h4 class="binduz-er-title"><a href="#">From overcoming burnout to finding new</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="binduz-er-sidebar-latest-post-item">
-                                            <div class="binduz-er-thumb">
-                                                <img src="assets/images/latest-post-4.jpg" alt="latest">
-                                            </div>
-                                            <div class="binduz-er-content">
-                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
-                                                <h4 class="binduz-er-title"><a href="#">Sparks of inspiration to the new trend 2021</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                    <div class="binduz-er-sidebar-latest-post-box">
-                                        <div class="binduz-er-sidebar-latest-post-item">
-                                            <div class="binduz-er-thumb">
-                                                <img src="assets/images/latest-post-1.jpg" alt="latest">
-                                            </div>
-                                            <div class="binduz-er-content">
-                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
-                                                <h4 class="binduz-er-title"><a href="#">Why creating inclusive classrooms matters</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="binduz-er-sidebar-latest-post-item">
-                                            <div class="binduz-er-thumb">
-                                                <img src="assets/images/latest-post-2.jpg" alt="latest">
-                                            </div>
-                                            <div class="binduz-er-content">
-                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
-                                                <h4 class="binduz-er-title"><a href="#">Celebrating Asian Pacific American art and</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="binduz-er-sidebar-latest-post-item">
-                                            <div class="binduz-er-thumb">
-                                                <img src="assets/images/latest-post-3.jpg" alt="latest">
-                                            </div>
-                                            <div class="binduz-er-content">
-                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
-                                                <h4 class="binduz-er-title"><a href="#">From overcoming burnout to finding new</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="binduz-er-sidebar-latest-post-item">
-                                            <div class="binduz-er-thumb">
-                                                <img src="assets/images/latest-post-4.jpg" alt="latest">
-                                            </div>
-                                            <div class="binduz-er-content">
-                                                <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
-                                                <h4 class="binduz-er-title"><a href="#">Sparks of inspiration to the new trend 2021</a></h4>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>

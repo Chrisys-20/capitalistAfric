@@ -14,11 +14,11 @@
                                 <div class="p-4">
 
                                     <div class="d-flex align-items-center">
-                                         @if(session()->has('message'))
+                                         <!-- @if(session()->has('message'))
                                         <div class=" flex-shrink-0 me-3" >
                                          <span id="message"  class="alert alert-success"><strong>{{session()->get('message')}}</strong></span>
                                         </div>
-                                        @endif
+                                        @endif -->
 
                                         <div class="flex-grow-1 overflow-hidden">
                                             <h5 class="font-size-16 mb-1">Entrez les informations</h5>
@@ -150,6 +150,15 @@
                                         </div>
                                         <!-- end row-->
                                     </form>
+                                    @if(Session::has('message'))
+                                    <script>
+                                            swal("Message","{{Session::get('message')}}",'success',{
+                                                button:true,
+                                                button:"OK",
+                                                timer:3000,
+                                            });
+                                    </script>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -173,7 +182,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="text-sm-end d-none d-sm-block">
-                        <a href="#" target="_blank" class="text-reset">Conditions générales</a>
+                        <a href="{{route('condition')}}" target="_blank" class="text-reset">Conditions générales</a>
                     </div>
                 </div>
             </div>

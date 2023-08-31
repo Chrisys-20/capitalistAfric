@@ -56,7 +56,7 @@
                                         <tr>
                                             <th scope="row" class="ps-4">
                                                 <div class="form-check font-size-16">
-                                                {{$loop->index+1}}
+                                                    {{$loop->index+1}}
 
                                                     <label class="form-check-label" for="contacusercheck1"></label>
                                                 </div>
@@ -80,15 +80,15 @@
                                             @endif
 
                                             @if($List->priority=="principale")
-                                            <td><span class="badge badge-soft-primary mb-0" >Principale</span></td>
+                                            <td><span class="badge badge-soft-primary mb-0">Principale</span></td>
                                             @else
-                                            <td><span class="badge badge-soft-warning mb-0" >Simple</span></td>
+                                            <td><span class="badge badge-soft-warning mb-0">Simple</span></td>
                                             @endif
 
                                             @if($List->status=="activé")
-                                            <td><span class="badge badge-soft-success mb-0" >activé</span></td>
+                                            <td><span class="badge badge-soft-success mb-0">activé</span></td>
                                             @else
-                                            <td><span class="badge badge-soft-danger mb-0" >désactivé</span></td>
+                                            <td><span class="badge badge-soft-danger mb-0">désactivé</span></td>
                                             @endif
                                             <td>
                                                 <ul class="list-inline mb-0">
@@ -96,12 +96,14 @@
                                                         <a href="{{route('article.edit',['ref'=>$List->ref])}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
                                                     </li>
                                                     <li class="list-inline-item">
-                                                        <a href="{{route('article.delete',['ref'=>$List->ref])}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
+                                                        <a href="{{route('article.delete',['ref'=>$List->ref])}}" data-confirm-delete="true" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"  class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
+
                                                     </li>
                                                     <li class="list-inline-item dropdown">
                                                         <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </a>
+                                                        
 
                                                         <div class="dropdown-menu dropdown-menu-end">
                                                             <a class="dropdown-item" href="{{route('article.list.activeted',['ref'=>$List->ref])}}">Activer</a>
@@ -233,7 +235,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="text-sm-end d-none d-sm-block">
-                        <a href="#" target="_blank" class="text-reset">Conditions générales</a>
+                        <a href="{{route('condition')}}" target="_blank" class="text-reset">Conditions générales</a>
                     </div>
                 </div>
             </div>

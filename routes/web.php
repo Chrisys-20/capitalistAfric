@@ -4,6 +4,7 @@ use App\Http\Controllers\Back\Article\CreatController;
 use App\Http\Controllers\Back\Article\ListController;
 use App\Http\Controllers\Back\Newsletter\NewsletterController;
 use App\Http\Controllers\Back\DashbController;
+use App\Http\Controllers\Front\ConditionGeneraleController;
 use App\Http\Controllers\Front\ArticleController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomeController;
@@ -34,9 +35,8 @@ Route::prefix('accueil')->group(function () {
 
     // NB:les separateur en underscore ne fonctionnent pas
     Route::get('/article/{categorie}%{ref}%', [ArticleController::class, 'index'])->name('article.details');
-    
-    
 
+    Route::get('/condition', [ConditionGeneraleController::class, 'index'])->name('condition');
     
 });
 

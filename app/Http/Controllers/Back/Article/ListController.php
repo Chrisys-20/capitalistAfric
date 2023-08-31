@@ -7,11 +7,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+
 class ListController extends Controller
 {
     //
     public function index(){
 
+        
+        
         $articleList=DB::table('articles')
         ->get();
         $totalearticle=DB::table('articles')
@@ -42,14 +45,12 @@ class ListController extends Controller
     }
 
     public function priority($ref){
-
+        
          DB::table('articles')
         ->where('ref', $ref)
         ->update(['priority' => 'principale']);
 
         return back();
     }
-
-
     
 }

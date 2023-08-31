@@ -11,7 +11,7 @@
                               </div>
                               <div class="binduz-er-footer-menu-list">
                                   <ul>
-                                      <li><a href="article-details.php">Finances</a></li>
+                                      <li><a href="#">Finances</a></li>
                                       <li><a href="#">Politiques</a></li>
                                       <li><a href="#">Analyses</a></li>
                                   </ul>
@@ -89,7 +89,7 @@
               <div class="col-lg-6">
                   <div class="binduz-er-copyright-menu float-lg-end float-none">
                       <ul>
-                          <li><a href="politique_de_confidentialité.pdf" target="new">Conditions Générales</a></li>
+                          <li><a href="{{route('condition')}}" target="new">Conditions Générales</a></li>
                           <!-- <li><a href="#">Claim A Report</a></li>
                             <li><a href="#">Careers</a></li> -->
                       </ul>
@@ -138,11 +138,7 @@
   <!--====== Main js ======-->
   <script src="{{asset('capitalistAf/assets/js/main.js')}}"></script>
 
-  <!-- Sweet Alerts js -->
-  <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
-
-<!-- Sweet alert init js-->
-<script src="assets/js/pages/sweet-alerts.init.js"></script>
+ 
 
   </body>
 
