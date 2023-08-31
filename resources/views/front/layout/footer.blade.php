@@ -11,14 +11,13 @@
                               </div>
                               <div class="binduz-er-footer-menu-list">
                                   <ul>
-                                      <li><a href="#">Finances</a></li>
-                                      <li><a href="#">Politiques</a></li>
-                                      <li><a href="#">Analyses</a></li>
+                                      <li><a href="#categorie">Finances</a></li>
+                                      <li><a href="#categorie">Politiques</a></li>
+                                      <li><a href="#categorie">Analyses</a></li>
                                   </ul>
                                   <ul>
-                                      <li><a href="#">Industries</a></li>
-                                      <li><a href="#">Bourse</a></li>
-                                      <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Admin</a></li>
+                                      <li><a href="#categorie">Industries</a></li>
+                                      <li><a href="#categorie">Bourse</a></li>
                                   </ul>
                               </div>
                           </div>
@@ -67,7 +66,7 @@
                           <a href="#"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt=""></a>
                       </div>
                       <div class="binduz-er-text">
-                          <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspend isse ultrices gravida.</p>
+                          <p>Capitalist Africa est la référence pour l'actualité économique, financière et politique africaine. </p>
                       </div>
 
                   </div>

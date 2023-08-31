@@ -50,6 +50,10 @@
                                 <li class="binduz-er-news-menu-item-has-children">
                                     <a href="{{route('contact')}}" target="new">Contact</a>
                                 </li>
+                                <li class="binduz-er-news-menu-item-has-children">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" target="new">Admin</a>
+                                </li>
+                                
                             </ul>
                         </div>
                         <div class="binduz-er-news-offcanvas_footer">

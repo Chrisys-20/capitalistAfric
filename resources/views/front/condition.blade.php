@@ -36,8 +36,7 @@
 
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{asset('capitalistAf/assets/css/style.css')}}">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5548895987560863"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5548895987560863" crossorigin="anonymous"></script>
 
 </head>
 
@@ -56,7 +55,10 @@
                     <div class="binduz-er-about-us-content">
                         <h4 class="binduz-er-title">Politique de protection des données personnelles</h4>
                         <div class="binduz-er-text mt-50">
-                            <!-- <p>When creating your app package, you can choose to create it manually or use App Studio, which is a useful app inside Teams that helps developers make Teams apps (yes, meta indeed stalled the App Studio app in you).</p> -->
+                            <p>Retrouvez sur cette page la politique de confidentialité de notre site web
+
+
+                                Nous collectons des informations vous concernant lorsque vous :</p>
                             <ul>
                                 <li>Inscrivez aux newsletters ou aux alertes proposées par Capitalistafrica</li>
                                 <li>Naviguez sur le site</li>

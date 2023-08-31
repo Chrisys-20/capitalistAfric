@@ -1452,7 +1452,7 @@ p {
     .binduz-er-trending-box .binduz-er-title .binduz-er-title::before {
       position: absolute;
       content: '';
-      left: 127%;
+      left: 120%;
       top: 50%;
       transform: translateY(-50%);
       height: 4px;
@@ -2880,7 +2880,7 @@ p {
     position: absolute;
     content: '';
     right: 0;
-    top: 50%;
+    top: 116%;
     transform: translateY(-50%);
     height: 4px;
     width: 70%;

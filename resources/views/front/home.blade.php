@@ -103,7 +103,7 @@
     <section class="binduz-er-trending-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 col-md-12">
+                <div class="col-lg-9 col-md-12" id="categorie">
                     <div class="binduz-er-trending-news-topbar d-block d-md-flex justify-content-between align-items-center">
                         <div class="binduz-er-trending-box">
                             <div class="binduz-er-title">
