@@ -160,7 +160,7 @@
                             <a href="#"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt=""></a>
                         </div>
                         <div class="binduz-er-text">
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspend isse ultrices gravida.</p>
+                        <p>Capitalist Africa est la référence pour l'actualité économique, financière et politique africaine. </p>
                         </div>
 
                     </div>
