@@ -11,7 +11,7 @@ class NewsletterController extends Controller
     //
     public function index(){
 
-        $allEmail=DB::table('newsletter')
+        $allEmail=DB::table('newsletters')
         ->get();
 
         return view('back.newsletter.news',['allEmail'=>$allEmail]);

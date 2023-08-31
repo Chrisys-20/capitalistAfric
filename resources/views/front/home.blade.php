@@ -482,12 +482,13 @@
                 <div class="col-lg-12">
                     <div class="binduz-er-trending-today-topbar">
                         <div class="binduz-er-trending-today-title">
-                            <h3 class="binduz-er-title">Meilleurs articles</h3>
+                            <h3 class="binduz-er-title">Les (04) Meilleurs articles</h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
+                @foreach($Meilleurpublication as $malist)
                 <div class="col-lg-3 col-md-6">
                     <div class="binduz-er-trending-today-item">
                         <div class="binduz-er-trending-news-list-box">
@@ -497,89 +498,30 @@
                             <div class="binduz-er-content">
                                 <div class="binduz-er-meta-item">
                                     <div class="binduz-er-meta-categories">
-                                        <a href="#">Politiques</a>
-                                    </div>
-                                    <div class="binduz-er-meta-date">
-                                        <span><i class="fal fa-calendar-alt"></i> 14th February 2023</span>
-                                    </div>
-                                </div>
-                                <div class="binduz-er-trending-news-list-title">
-                                    <h4 class="binduz-er-title"><a href="#">A Matter of Impact: April updates from
-                                            Google.org</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="binduz-er-trending-today-item">
-                        <div class="binduz-er-trending-news-list-box">
-                            <div class="binduz-er-thumb">
-                                <img src="{{asset('capitalistAf/assets/images/trending-today-thumb-1.png')}}" alt="">
-                            </div>
-                            <div class="binduz-er-content">
-                                <div class="binduz-er-meta-item">
-                                    <div class="binduz-er-meta-categories">
+                                        @if($malist->categorie=="fi")
                                         <a href="#">Finances</a>
-                                    </div>
-                                    <div class="binduz-er-meta-date">
-                                        <span><i class="fal fa-calendar-alt"></i> 14th February 2023</span>
-                                    </div>
-                                </div>
-                                <div class="binduz-er-trending-news-list-title">
-                                    <h4 class="binduz-er-title"><a href="#">Android Enterprise security delivers for
-                                            flexible work</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="binduz-er-trending-today-item">
-                        <div class="binduz-er-trending-news-list-box">
-                            <div class="binduz-er-thumb">
-                                <img src="{{asset('capitalistAf/assets/images/trending-today-thumb-1.png')}}" alt="">
-                            </div>
-                            <div class="binduz-er-content">
-                                <div class="binduz-er-meta-item">
-                                    <div class="binduz-er-meta-categories">
+                                        @elseif($malist->categorie=="po")
                                         <a href="#">Politiques</a>
-                                    </div>
-                                    <div class="binduz-er-meta-date">
-                                        <span><i class="fal fa-calendar-alt"></i> 14th February 2023</span>
-                                    </div>
-                                </div>
-                                <div class="binduz-er-trending-news-list-title">
-                                    <h4 class="binduz-er-title"><a href="#">Trash to treasure: How Google thinks about
-                                            deconstruction</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="binduz-er-trending-today-item">
-                        <div class="binduz-er-trending-news-list-box">
-                            <div class="binduz-er-thumb">
-                                <img src="{{asset('capitalistAf/assets/images/trending-today-thumb-1.png')}}" alt="">
-                            </div>
-                            <div class="binduz-er-content">
-                                <div class="binduz-er-meta-item">
-                                    <div class="binduz-er-meta-categories">
+                                        @elseif($malist->categorie=="id")
                                         <a href="#">Industries</a>
+                                        @elseif($malist->categorie=="an")
+                                        <a href="#">Analyses</a>
+                                        @else
+                                        <a href="#">Bourse</a>
+                                        @endif
                                     </div>
                                     <div class="binduz-er-meta-date">
-                                        <span><i class="fal fa-calendar-alt"></i> 14th February 2023</span>
+                                        <span><i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>
                                     </div>
                                 </div>
                                 <div class="binduz-er-trending-news-list-title">
-                                    <h4 class="binduz-er-title"><a href="#">We pack in here just the things to start a
-                                            News</a></h4>
+                                    <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$malist->ref,'categorie'=>$malist->categorie])}}">{{$malist->title}}</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </section>

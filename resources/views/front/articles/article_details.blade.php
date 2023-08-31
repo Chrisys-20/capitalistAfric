@@ -111,7 +111,7 @@
                                 </div>
                                 <div class="binduz-er-meta-list">
                                     <ul>
-                                        <li><i class="fal fa-eye"></i> {{$totalvue}}</li>
+                                        <li><i class="fal fa-eye"></i> {{$totalvue}}  Vue(s) </li>
                                         <!-- <li><i class="fal fa-heart"></i> 5k</li>
                                         <li><i class="fal fa-comments"></i> 5k</li> -->
                                     </ul>

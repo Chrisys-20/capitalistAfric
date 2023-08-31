@@ -53,8 +53,15 @@ class HomeController extends Controller
         ->limit(10)
         ->get();
 
+       $Meilleurpublication=DB::table('articles')
+        ->where('status','activé')
+        ->orderBy('view','desc')
+        ->limit(4)
+        ->get();
+        
+
        //dd($categoriesOff);
-        return view('front.home',['categories'=>$categories,'categOff'=>$categoriesOff,'lastPublication'=>$lastPublication,'publication'=>$publication]);
+        return view('front.home',['categories'=>$categories,'categOff'=>$categoriesOff,'lastPublication'=>$lastPublication,'publication'=>$publication,'Meilleurpublication'=>$Meilleurpublication]);
     }
 
     public function newsLetter(Request $request){
