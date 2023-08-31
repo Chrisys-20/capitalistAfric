@@ -24,12 +24,12 @@ class CreatController extends Controller
 
         $incomingFields=$request->validate([
 
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'categorie'=>['required','min:2','max:10'],
             'title'=>['required','max:500'],
-            'paragraphe1'=>['required','min:4','max:2000'],
-            'paragraphe2'=>['required','min:4','max:2000'],
-            'paragraphe3'=>['required','min:4','max:2000'],
+            'paragraphe1'=>['required'],
+            'paragraphe2'=>['required'],
+            'paragraphe3'=>['required'],
         ]);
 
         // die(var_dump($request->all()));
@@ -120,9 +120,9 @@ class CreatController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'categorie'=>['required','min:2','max:10'],
             'title'=>['required','max:500'],
-            'paragraphe1'=>['required','min:4','max:2000'],
-            'paragraphe2'=>['required','min:4','max:2000'],
-            'paragraphe3'=>['required','min:4','max:2000'],
+            'paragraphe1'=>['required'],
+            'paragraphe2'=>['required'],
+            'paragraphe3'=>['required'],
         ]);
         
 

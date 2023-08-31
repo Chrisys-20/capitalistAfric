@@ -90,35 +90,35 @@
                                             @if($errors->has('paragraphe3'))
                                             <span class="text-danger">{{$errors->first('paragraphe3')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="paragraphe3"   id="productdesc4" placeholder="Entrez le troisième paragraphe" rows="8"></textarea>
+                                            <textarea class="form-control" name="paragraphe3"  required id="productdesc4" placeholder="Entrez le troisième paragraphe" rows="8"></textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe4</label>
                                             @if($errors->has('paragraphe4'))
                                             <span class="text-danger">{{$errors->first('paragraphe4')}}</span>
                                             @endif
-                                            <textarea class="form-control"  required name="paragraphe4" id="productdesc5" placeholder="Entrez le quatrième paragraphe" rows="8"></textarea>
+                                            <textarea class="form-control"  name="paragraphe4" id="productdesc5" placeholder="Entrez le quatrième paragraphe" rows="8"></textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe5</label>
                                             @if($errors->has('paragraphe5'))
                                             <span class="text-danger">{{$errors->first('paragraphe5')}}</span>
                                             @endif
-                                            <textarea class="form-control"  required name="paragraphe5" id="productdesc6" placeholder="Entrez le cinquième paragraphe" rows="8"></textarea>
+                                            <textarea class="form-control"   name="paragraphe5" id="productdesc6" placeholder="Entrez le cinquième paragraphe" rows="8"></textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe6</label>
                                             @if($errors->has('paragraphe6'))
                                             <span class="text-danger">{{$errors->first('paragraphe6')}}</span>
                                             @endif
-                                            <textarea class="form-control"  required name="paragraphe6" id="productdesc7" placeholder="Entrez le sixième paragraphe" rows="8"></textarea>
+                                            <textarea class="form-control"   name="paragraphe6" id="productdesc7" placeholder="Entrez le sixième paragraphe" rows="8"></textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe7</label>
                                             @if($errors->has('paragraphe7'))
                                             <span class="text-danger">{{$errors->first('paragraphe7')}}</span>
                                             @endif
-                                            <textarea class="form-control"  required name="paragraphe7" id="productdesc8" placeholder="Entrez le septième paragraphe" rows="8"></textarea>
+                                            <textarea class="form-control"  name="paragraphe7" id="productdesc8" placeholder="Entrez le septième paragraphe" rows="8"></textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe8</label>
