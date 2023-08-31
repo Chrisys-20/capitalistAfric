@@ -36,7 +36,8 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{asset('capitalistAf/assets/css/style.css')}}">
 
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5548895987560863"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>

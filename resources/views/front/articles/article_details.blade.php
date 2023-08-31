@@ -35,7 +35,8 @@
 
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{asset('capitalistAf/assets/css/style.css')}}">
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5548895987560863"
+     crossorigin="anonymous"></script>
 
 </head>
 
@@ -161,9 +162,11 @@
                                     <div class="binduz-er-text pt-50 text-justify">
                                         <p style="text-align: justify;">{{$monArticle[0]->paragraphe9}}</p>
                                     </div>
+                                    @if(!empty($monArticle[0]->paragraphe10))
                                     <div class="binduz-er-text pt-50 text-justify">
                                         <p style="text-align: justify;">{{$monArticle[0]->paragraphe10}}</p>
                                     </div>
+                                    @endif
 
                                     <!-- <div class="binduz-er-text mt-50 mb-50">
                                         <h3 class="binduz-er-title">Working Process</h3>
