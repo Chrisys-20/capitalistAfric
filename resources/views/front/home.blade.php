@@ -493,7 +493,7 @@
                     <div class="binduz-er-trending-today-item">
                         <div class="binduz-er-trending-news-list-box">
                             <div class="binduz-er-thumb">
-                                <img src="{{asset('capitalistAf/assets/images/trending-today-thumb-1.png')}}" alt="">
+                                <img src="{{$malist->image}}" alt="">
                             </div>
                             <div class="binduz-er-content">
                                 <div class="binduz-er-meta-item">
