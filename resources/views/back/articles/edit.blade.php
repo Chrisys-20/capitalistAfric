@@ -84,6 +84,13 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 mb-0">
+                                            <label class="form-label" for="productdesc3">Citation</label>
+                                            @if($errors->has('blockote'))
+                                            <span class="text-danger">{{$errors->first('blockote')}}</span>
+                                            @endif
+                                            <textarea class="form-control" name="blockote"  id="productdesc2" placeholder="Entrez le premier paragraphe" rows="8">{{$article[0]->blockote}}</textarea>
+                                        </div>
+                                        <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc3">Paragraphe1</label>
                                             @if($errors->has('paragraphe1'))
                                             <span class="text-danger">{{$errors->first('paragraphe1')}}</span>
@@ -102,35 +109,35 @@
                                             @if($errors->has('paragraphe3'))
                                             <span class="text-danger">{{$errors->first('paragraphe3')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="paragraphe3" required id="productdesc4" rows="8">{{$article[0]->paragraphe3}}</textarea>
+                                            <textarea class="form-control" name="paragraphe3"  id="productdesc4" rows="8">{{$article[0]->paragraphe3}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe4</label>
                                             @if($errors->has('paragraphe4'))
                                             <span class="text-danger">{{$errors->first('paragraphe4')}}</span>
                                             @endif
-                                            <textarea class="form-control" required name="paragraphe4" id="productdesc5" rows="8">{{$article[0]->paragraphe4}}</textarea>
+                                            <textarea class="form-control"  name="paragraphe4" id="productdesc5" rows="8">{{$article[0]->paragraphe4}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe5</label>
                                             @if($errors->has('paragraphe5'))
                                             <span class="text-danger">{{$errors->first('paragraphe5')}}</span>
                                             @endif
-                                            <textarea class="form-control" required name="paragraphe5" id="productdesc6" rows="8"> {{$article[0]->paragraphe5}}</textarea>
+                                            <textarea class="form-control"  name="paragraphe5" id="productdesc6" rows="8"> {{$article[0]->paragraphe5}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe6</label>
                                             @if($errors->has('paragraphe6'))
                                             <span class="text-danger">{{$errors->first('paragraphe6')}}</span>
                                             @endif
-                                            <textarea class="form-control" required name="paragraphe6" id="productdesc7" rows="8">{{$article[0]->paragraphe6}}</textarea>
+                                            <textarea class="form-control" name="paragraphe6" id="productdesc7" rows="8">{{$article[0]->paragraphe6}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe7</label>
                                             @if($errors->has('paragraphe7'))
                                             <span class="text-danger">{{$errors->first('paragraphe7')}}</span>
                                             @endif
-                                            <textarea class="form-control" required name="paragraphe7" id="productdesc8" rows="8">{{$article[0]->paragraphe7}}</textarea>
+                                            <textarea class="form-control" name="paragraphe7" id="productdesc8" rows="8">{{$article[0]->paragraphe7}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe8</label>
