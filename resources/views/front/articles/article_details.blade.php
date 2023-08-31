@@ -58,7 +58,6 @@
                                 <li class="breadcrumb-item"><a href="#">Finances</a></li>
                                 @elseif($monArticle[0]->categorie=="po")
                                 <li class="breadcrumb-item"><a href="#">Politique</a></li>
-                                <a href="#">Politique</a>
                                 @elseif($monArticle[0]->categorie=="id")
                                 <li class="breadcrumb-item"><a href="#">Industries</a></li>
                                 @elseif($monArticle[0]->categorie=="an")
