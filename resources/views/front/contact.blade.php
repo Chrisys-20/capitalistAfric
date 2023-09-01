@@ -110,13 +110,13 @@
                                 </div>
                                 <div class="binduz-er-footer-menu-list">
                                     <ul>
-                                        <li><a href="#">Finances</a></li>
-                                        <li><a href="#">Politiques</a></li>
-                                        <li><a href="#">Analyses</a></li>
+                                        <li><a href="{{route('front.home')}}#categorie">Finances</a></li>
+                                        <li><a href="{{route('front.home')}}#categorie">Politiques</a></li>
+                                        <li><a href="{{route('front.home')}}#categorie">Analyses</a></li>
                                     </ul>
                                     <ul>
-                                        <li><a href="#">Industries</a></li>
-                                        <li><a href="#">Bourse</a></li>
+                                        <li><a href="{{route('front.home')}}#categorie">Industries</a></li>
+                                        <li><a href="{{route('front.home')}}#categorie">Bourse</a></li>
                                     </ul>
                                 </div>
                             </div>

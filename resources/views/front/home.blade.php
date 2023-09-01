@@ -150,7 +150,7 @@
                                                                     <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
                                                                 </div> -->
                                                                 <div class="binduz-er-trending-news-title">
-                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
+                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre portée</a></h3>
                                                                 </div>
                                                             </div>
                                                             <!-- <div class="binduz-er-news-share">
@@ -207,6 +207,8 @@
                                                                     <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
                                                                 </div> -->
                                                                 <div class="binduz-er-trending-news-title">
+                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
+                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
                                                                     <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
                                                                 </div>
                                                             </div>
@@ -269,7 +271,7 @@
                                                             </div>
                                                             <!-- <div class="binduz-er-news-share">
                                                                 <a href="#"><i class="fal fa-share"></i></a>
-                                                            </div> -->
+                                                           Tous les Articles  </div> -->
                                                         </div>
                                                     </div>
                                                 </div>

@@ -53,7 +53,7 @@
                                 <li class="binduz-er-news-menu-item-has-children">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" target="new">Admin</a>
                                 </li>
-                                
+
                             </ul>
                         </div>
                         <div class="binduz-er-news-offcanvas_footer">
@@ -184,9 +184,9 @@
                 <div class="col-lg-6">
                     <div class="binduz-er-topbar-headline">
                         <div class="binduz-er-topbar-headline">
-                            @foreach($categOff as $categ)
-                            <p> <i class="fas fa-bolt"></i>Avec<span style="text-decoration: none;"> CAPITALIST AFRICA</span> <a href="#">, L'actualité est à votre porté!!! </a></p>
-                            @endforeach
+                            <p> <i class="fas fa-bolt"></i>Avec<span style="text-decoration: none;"> CAPITALIST AFRICA</span> <a href="#">, L'actualité est à votre portée!!! </a></p>
+                            <p> <i class="fas fa-bolt"></i>Avec<span style="text-decoration: none;"> CAPITALIST AFRICA</span> <a href="#">, L'actualité est à votre portée!!! </a></p>
+                            <p> <i class="fas fa-bolt"></i>Avec<span style="text-decoration: none;"> CAPITALIST AFRICA</span> <a href="#">, L'actualité est à votre portée!!! </a></p>
                         </div>
                     </div>
                 </div>
@@ -200,9 +200,9 @@
                                 <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </div> -->
-                        <div class="binduz-er-news-subscribe-btn">
+                        <!-- <div class="binduz-er-news-subscribe-btn">
                             <a class="binduz-er-main-btn" href="#">Email: contact@capitalistafrica.com</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

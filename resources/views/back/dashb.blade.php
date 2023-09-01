@@ -13,7 +13,7 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <h6 class="font-size-15">Finances</h6>
-                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">12,253 </h4>
+                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">{{$articleListByGroupFi}} </h4>
                                 </div>
                                 <div class="">
                                     <div class="avatar">
@@ -32,7 +32,7 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <h6 class="font-size-15">Politique</h6>
-                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">12,253 </h4>
+                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">{{$articleListByGroupPo}} </h4>
                                 </div>
                                 <div class="">
                                     <div class="avatar">
@@ -51,7 +51,7 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <h6 class="font-size-15">Bourse</h6>
-                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">12,253 </h4>
+                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">{{$articleListByGroupBo}} </h4>
                                 </div>
                                 <div class="">
                                     <div class="avatar">
@@ -70,7 +70,7 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <h6 class="font-size-15">Analyses</h6>
-                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">12,253 </h4>
+                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">{{$articleListByGroupAn}} </h4>
                                 </div>
                                 <div class="">
                                     <div class="avatar">
@@ -89,7 +89,7 @@
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <h6 class="font-size-15">Industries</h6>
-                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">12,253 </h4>
+                                    <h4 class="mt-3 pt-1 mb-0 font-size-22">{{$articleListByGroupId}}</h4>
                                 </div>
                                 <div class="">
                                     <div class="avatar">
@@ -111,7 +111,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="mb-4">
-                                <h5 class="card-title"> LES GRANDS TITRES <span class="text-muted fw-normal ms-2">(834)</span></h5>
+                                <h5 class="card-title"> LES GRANDS TITRES <span class="text-muted fw-normal ms-2"><strong style="color:purple">({{$principaleArticlenb}})</strong></span></h5>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-nowrap align-middle">
