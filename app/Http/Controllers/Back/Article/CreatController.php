@@ -160,8 +160,8 @@ class CreatController extends Controller
             'paragraphe10'=> $request->paragraphe10,
         ]);
 
-        // return redirect()->route('article.list')->with('message','Article crée avec success');;
-        return back()->with('message','Article mis à jour avec success');;
+        return redirect()->route('article.list')->with('message','Article mis à jour avec success');
+        // return back()->with('message','Article mis à jour avec success');
     }
 
     public function delete($refarticle, Request $request){
