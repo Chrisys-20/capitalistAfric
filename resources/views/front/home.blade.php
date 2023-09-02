@@ -117,7 +117,7 @@
                                     <a class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">Finances</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">Politique</a>
+                                    <a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">Politiques</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link" id="pills-3-tab" data-bs-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">Industries</a>
@@ -201,14 +201,12 @@
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
-                                                                    <a href="#">Politique</a>
+                                                                    <a href="#">Politiques</a>
                                                                 </div>
                                                                 <!-- <div class="binduz-er-meta-date">
                                                                     <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
                                                                 </div> -->
                                                                 <div class="binduz-er-trending-news-title">
-                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
-                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
                                                                     <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
                                                                 </div>
                                                             </div>
@@ -234,7 +232,7 @@
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
                                                                 <div class="binduz-er-meta-categories">
-                                                                    <a href="#">Politique</a>
+                                                                    <a href="#">Politiques</a>
                                                                 </div>
                                                                 <div class="binduz-er-meta-date">
                                                                     <span><i class="fal fa-calendar-alt"></i> {{$mycategorie->updated_at}}</span>
@@ -271,7 +269,7 @@
                                                             </div>
                                                             <!-- <div class="binduz-er-news-share">
                                                                 <a href="#"><i class="fal fa-share"></i></a>
-                                                           Tous les Articles  </div> -->
+                                                            </div> -->
                                                         </div>
                                                     </div>
                                                 </div>

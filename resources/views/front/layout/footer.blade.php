@@ -48,12 +48,12 @@
                       <div class="col-lg-4 col-md-6">
                           <div class="binduz-er-footer-widget-style-1">
                               <div class="binduz-er-footer-title">
-                                  <h3 class="binduz-er-title">Contacts</h3>
+                                  <h3 class="binduz-er-title">Contact</h3>
                               </div>
                               <div class="binduz-er-footer-widget-form">
                                   <div class="binduz-er-input-box">
                                       <!-- <p><i class="fas fa-phone"></i> (+237)</p> -->
-                                      <p><i class="fas fa-envelope"></i> contact@capitalistAfafrica.com</p>
+                                      <p><i class="fas fa-envelope"></i> contact@capitalistAfrica.com</p>
                                   </div>
                               </div>
                           </div>

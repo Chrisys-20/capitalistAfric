@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('views', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('articles_id')->references('id')->on('articles')->nullable();
+            $table->integer('id_articles');
             $table->string('ipadresse')->nullable();    
             $table->timestamps();
         });

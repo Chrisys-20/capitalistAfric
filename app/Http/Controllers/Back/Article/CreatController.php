@@ -8,7 +8,6 @@ use App\Models\Article;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\Rules\File;
 Use Alert;
 
 
@@ -25,8 +24,7 @@ class CreatController extends Controller
 
         $incomingFields=$request->validate([
 
-            // 'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
-            'image' => ['required', File::image()->smallerThan(1024)],
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'categorie'=>['required','min:2','max:10'],
             'title'=>['required','max:500'],
             'paragraphe1'=>['required'],
