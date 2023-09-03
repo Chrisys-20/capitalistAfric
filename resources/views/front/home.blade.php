@@ -140,7 +140,7 @@
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
                                                     <div class="binduz-er-trending-news-item">
-                                                        <img src="{{asset('capitalistAf/assets/images/news-slider-2.jpg')}}" alt="">
+                                                        <img src="{{asset('capitalistAf/assets/images/finances.jpeg')}}" width="507px" height="353px"alt="">
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
@@ -197,7 +197,7 @@
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
                                                     <div class="binduz-er-trending-news-item">
-                                                        <img src="{{asset('capitalistAf/assets/images/news-slider-3.jpg')}}" alt="">
+                                                        <img src="{{asset('capitalistAf/assets/images/politiques.jpeg')}}" width="507px" height="353px" alt="">
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
@@ -254,7 +254,7 @@
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
                                                     <div class="binduz-er-trending-news-item">
-                                                        <img src="{{asset('capitalistAf/assets/images/news-slider-2.jpg')}}" alt="">
+                                                        <img src="{{asset('capitalistAf/assets/images/industries.jpeg')}}"  alt="">
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
@@ -311,7 +311,7 @@
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
                                                     <div class="binduz-er-trending-news-item">
-                                                        <img src="{{asset('capitalistAf/assets/images/trending-thumb.png')}}" alt="">
+                                                        <img src="{{asset('capitalistAf/assets/images/bourse.jpeg')}}" width="507px" height="353px" alt="">
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
@@ -368,7 +368,7 @@
                                             <div class="col-lg-7 col-md-6">
                                                 <div class="binduz-er-trending-box">
                                                     <div class="binduz-er-trending-news-item">
-                                                        <img src="{{asset('capitalistAf/assets/images/news-slider-2.jpg')}}" alt="">
+                                                        <img src="{{asset('capitalistAf/assets/images/analyses.jpeg')}}" width="500px" height="420px" alt="">
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
