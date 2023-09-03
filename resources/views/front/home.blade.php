@@ -59,7 +59,7 @@
                         <div class="binduz-er-news-viewed-most">
                             <div class="binduz-er-thumb">
                                 @if($mycategorie->image)
-                                <img src="{{$mycategorie->image}}" width="574px" height="574px" alt="">
+                                <img src="{{$mycategorie->image}}" width="450px" height="450px" alt="">
                                 @else
                                 <img src="{{asset('capitalistAf/assets/images/journee_traite.jpg')}}" width="574px" height="574px" alt="">
                                 @endif
