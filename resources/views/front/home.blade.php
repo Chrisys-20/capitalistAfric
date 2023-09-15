@@ -494,7 +494,7 @@
                     <div class="binduz-er-trending-today-item">
                         <div class="binduz-er-trending-news-list-box">
                             <div class="binduz-er-thumb">
-                                <img src="{{$malist->image}}" alt="">
+                                <img src="{{$malist->image}}" width="322px" height="215px" alt="">
                             </div>
                             <div class="binduz-er-content">
                                 <div class="binduz-er-meta-item">
