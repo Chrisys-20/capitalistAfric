@@ -20,27 +20,33 @@ class CreatController extends Controller
     }
 
     public function store(Request $request){
-        // dd($request->all());
-
+        //dd($request->file('image'));
+     //   dd($request->all(),$request->file('image'));
+        
         $incomingFields=$request->validate([
 
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
-            'categorie'=>['required','min:2','max:10'],
             'title'=>['required','max:500'],
+            'categorie'=>['required','min:2','max:10'], 
+            'blockote'=>['required','min:10'],
             'paragraphe1'=>['required'],
             'paragraphe2'=>['required'],
+            'paragraphe3'=>['required'],
         ]);
 
         // die(var_dump($request->all()));
         //dd($request->all());
-
-        do {
-            $ref='Article_'.(new  Fonction())->genUniqueID('22');
-            $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
-        }while (!empty($find_ref));
-
-        $image_path = "public/images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
-        $request->file('image')->move(public_path('images/article'),$image_path);
+        if (!empty($request->file('image'))){
+            do {
+                $ref='Article_'.(new  Fonction())->genUniqueID('22');
+                $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
+            }while (!empty($find_ref));
+    
+            $image_path = "public/images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->move(public_path('images/article'),$image_path);
+            
+        }else{
+           return back()->with('error','Image is required');
+        }
         
         //die(var_dump('yes'));
 
@@ -118,9 +124,9 @@ class CreatController extends Controller
         
         $incomingFields=$request->validate([
 
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg',
-            'categorie'=>['required','min:2','max:10'],
             'title'=>['required','max:500'],
+            'categorie'=>['required','min:2','max:10'], 
+            'blockote'=>['required','min:10'],
             'paragraphe1'=>['required'],
             'paragraphe2'=>['required'],
             'paragraphe3'=>['required'],
@@ -130,15 +136,20 @@ class CreatController extends Controller
         // die(var_dump($request->all()));
         //dd($request->all());
   
-        do {
-            $ref='Article_'.(new  Fonction())->genUniqueID('22');
-            $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
-        }while (!empty($find_ref));
-
-        $image_path = "public/images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
-        $request->file('image')->move(public_path('images/article'),$image_path);
         
-       // dd($refarticle);
+        if (!empty($request->file('image'))){
+            do {
+                $ref='Article_'.(new  Fonction())->genUniqueID('22');
+                $find_ref=DB::select('select * from articles where ref="'.$ref.'"');
+            }while (!empty($find_ref));
+    
+            $image_path = "public/images/article/".$ref.'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->move(public_path('images/article'),$image_path);
+            
+        }else{
+           return back()->with('error','Image is required');
+        }
+        // dd($refarticle);
 
 
         DB::table('articles')

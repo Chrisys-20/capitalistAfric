@@ -60,7 +60,7 @@ class HomeController extends Controller
         ->get();
         
 
-       //dd($categoriesOff);
+      // dd($publication);
         return view('front.home',['categories'=>$categories,'categOff'=>$categoriesOff,'lastPublication'=>$lastPublication,'publication'=>$publication,'Meilleurpublication'=>$Meilleurpublication]);
     }
 

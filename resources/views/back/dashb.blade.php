@@ -119,7 +119,7 @@
                                         <tr>
                                             <th scope="col" class="ps-4" style="width: 50px;">
                                                 <div class="form-check font-size-16">
-                                                   #
+                                                    #
                                                     <label class="form-check-label" for="contacusercheck"></label>
                                                 </div>
                                             </th>
@@ -135,7 +135,7 @@
 
                                         <tr>
                                             <th scope="row" class="ps-4">
-                                            {{$loop->index+1}}
+                                                {{$loop->index+1}}
                                             </th>
                                             <td>
                                                 <!-- <img src="dashboard/asset{{$prinList->image}}" alt="" class="avatar rounded-circle img-thumbnail me-2"> -->
@@ -143,20 +143,20 @@
                                             </td>
                                             <td>{{$prinList->ref}}</td>
                                             @if($prinList->priority=="principale")
-                                            <td><span class="badge badge-soft-primary mb-0" >Principale</span></td>
+                                            <td><span class="badge badge-soft-primary mb-0">Principale</span></td>
                                             @else
-                                            <td><span class="badge badge-soft-warning mb-0" >Simple</span></td>
+                                            <td><span class="badge badge-soft-warning mb-0">Simple</span></td>
                                             @endif
 
                                             @if($prinList->status=="activé")
-                                            <td><span class="badge badge-soft-success mb-0" >Activé</span></td>
+                                            <td><span class="badge badge-soft-success mb-0">Activé</span></td>
                                             @else
-                                            <td><span class="badge badge-soft-danger mb-0" >Désactivé</span></td>
+                                            <td><span class="badge badge-soft-danger mb-0">Désactivé</span></td>
                                             @endif
-                                            
-                                            
+
+
                                         </tr>
-                                        
+
                                         @endforeach
 
                                     </tbody>
@@ -167,7 +167,33 @@
                 </div>
             </div>
             <!-- end row -->
+            <div class="row g-0 align-items-center pb-4">
+                <div class="col-sm-6">
+                    <!-- <div>
+                                    <p class="mb-sm-0">Showing 1 to 10 of 57 entries</p>
+                                </div> -->
+                </div>
+                <div class="col-sm-6">
+                    <div class="float-sm-end">
+                        {{ $principaleArticle->links()}}
 
+                        <!-- <ul class="pagination mb-sm-0">
+                            <li class="page-item disabled">
+                                <a href="#" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item active">
+                                <a href="#" class="page-link">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- container-fluid -->
     </div>

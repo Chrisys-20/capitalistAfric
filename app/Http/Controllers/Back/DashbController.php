@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,9 +19,12 @@ class DashbController extends Controller
         $articleList = DB::table('articles')
             ->get();
 
-        $principaleArticle = DB::table('articles')
-            ->where('priority', "principale")
-            ->get();
+        // $principaleArticle = DB::table('articles')
+        //     ->where('priority', "principale")
+        //     ->get();
+            $principaleArti= new Article();
+            $principaleArticle= $principaleArti->where('priority', "principale")->paginate(10);
+
         $principaleArticlenb = DB::table('articles')
             ->where('priority', "principale")
             ->get()->count();

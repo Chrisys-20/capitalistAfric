@@ -57,7 +57,7 @@
                                 @if($monArticle[0]->categorie=="fi")
                                 <li class="breadcrumb-item"><a href="#">Finances</a></li>
                                 @elseif($monArticle[0]->categorie=="po")
-                                <li class="breadcrumb-item"><a href="#">Politique</a></li>
+                                <li class="breadcrumb-item"><a href="#">Infrastructures </a></li>
                                 @elseif($monArticle[0]->categorie=="id")
                                 <li class="breadcrumb-item"><a href="#">Industries</a></li>
                                 @elseif($monArticle[0]->categorie=="an")
@@ -90,7 +90,7 @@
                                     @if($monArticle[0]->categorie=="fi")
                                     <a href="#">Finances</a>
                                     @elseif($monArticle[0]->categorie=="po")
-                                    <a href="#">Politiques</a>
+                                    <a href="#">Infrastructures</a>
                                     @elseif($monArticle[0]->categorie=="id")
                                     <a href="#">Industries</a>
                                     @elseif($monArticle[0]->categorie=="an")
@@ -207,7 +207,7 @@
                                             <div class="binduz-er-video-post binduz-er-recently-viewed-item">
                                                 <div class="binduz-er-latest-news-item">
                                                     <div class="binduz-er-thumb">
-                                                        <img src="assets/images/editors-pack-thumb-1.jpg" alt="">
+                                                        <img src="{{$myListe->image}}" width="299px" height="199px" alt="">
                                                     </div>
                                                     <div class="binduz-er-content">
                                                         <div class="binduz-er-meta-item">
@@ -215,7 +215,7 @@
                                                                 @if($myListe->categorie=="fi")
                                                                 <a href="#">Finances</a>
                                                                 @elseif($myListe->categorie=="po")
-                                                                <a href="#">Politiques</a>
+                                                                <a href="#">Infrastructures</a>
                                                                 @elseif($myListe->categorie=="id")
                                                                 <a href="#">Industries</a>
                                                                 @elseif($myListe->categorie=="an")

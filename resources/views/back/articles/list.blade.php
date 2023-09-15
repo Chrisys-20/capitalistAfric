@@ -133,7 +133,10 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="float-sm-end">
-                        <ul class="pagination mb-sm-0">
+                    {{$articleList->links()}}
+
+                        <!-- <ul class="pagination mb-sm-0">
+                            
                             <li class="page-item disabled">
                                 <a href="#" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
                             </li>
@@ -146,7 +149,7 @@
                             <li class="page-item">
                                 <a href="#" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>

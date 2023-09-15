@@ -111,7 +111,7 @@
                                 <div class="binduz-er-footer-menu-list">
                                     <ul>
                                         <li><a href="#">Finances</a></li>
-                                        <li><a href="#">Politiques</a></li>
+                                        <li><a href="#">Infrastructures</a></li>
                                         <li><a href="#">Analyses</a></li>
                                     </ul>
                                     <ul>
@@ -133,7 +133,7 @@
                                             <input type="email" placeholder="Votre address mail ">
                                         </div>
                                         <div class="binduz-er-input-box">
-                                            <button type="button"><i class="fal fa-paper-plane"></i> Souscrire</button>
+                                            <button type="button"><i class="fal fa-paper-plane"></i>S'abonner</button>
                                         </div>
                                     </form>
                                 </div>
@@ -183,6 +183,7 @@
                     <div class="binduz-er-copyright-menu float-lg-end float-none">
                         <ul>
                             <li><a href="{{route('condition')}}" target="new">Conditions générales</a></li>
+                            <li><a href="https://policies.google.com/technologies/partner-sites" target="new">Avis de confidentialité</a></li>
                             <!-- <li><a href="#">Claim A Report</a></li>
                             <li><a href="#">Careers</a></li> -->
                         </ul>

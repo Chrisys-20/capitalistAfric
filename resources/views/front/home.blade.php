@@ -70,7 +70,7 @@
                                         @if($mycategorie->categorie=="fi")
                                         <a href="#">Finances</a>
                                         @elseif($mycategorie->categorie=="po")
-                                        <a href="#">Politiques</a>
+                                        <a href="#">Infrastructures</a>
                                         @elseif($mycategorie->categorie=="id")
                                         <a href="#">Industries</a>
                                         @elseif($mycategorie->categorie=="an")
@@ -117,7 +117,7 @@
                                     <a class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">Finances</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">Politiques</a>
+                                    <a class="nav-link" id="pills-2-tab" data-bs-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">Infrastructures</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link" id="pills-3-tab" data-bs-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">Industries</a>
@@ -201,7 +201,7 @@
                                                         <div class="binduz-er-trending-news-overlay">
                                                             <div class="binduz-er-trending-news-meta">
                                                                 <div class="binduz-er-meta-categories">
-                                                                    <a href="#">Politiques</a>
+                                                                    <a href="#">Infrastructures</a>
                                                                 </div>
                                                                 <!-- <div class="binduz-er-meta-date">
                                                                     <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
@@ -232,7 +232,7 @@
                                                         <div class="binduz-er-content">
                                                             <div class="binduz-er-meta-item">
                                                                 <div class="binduz-er-meta-categories">
-                                                                    <a href="#">Politiques</a>
+                                                                    <a href="#">Infrastructures</a>
                                                                 </div>
                                                                 <div class="binduz-er-meta-date">
                                                                     <span><i class="fal fa-calendar-alt"></i> {{$mycategorie->updated_at}}</span>
@@ -264,7 +264,7 @@
                                                                     <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
                                                                 </div> -->
                                                                 <div class="binduz-er-trending-news-title">
-                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
+                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre portée</a></h3>
                                                                 </div>
                                                             </div>
                                                             <!-- <div class="binduz-er-news-share">
@@ -447,7 +447,7 @@
                                                 @if($malist->categorie=="fi")
                                                 <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Finances</a>
                                                 @elseif($malist->categorie=="po")
-                                                <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Politiques</a>
+                                                <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Infrastructures</a>
                                                 @elseif($malist->categorie=="id")
                                                 <a href="#" style="display: inline-block;background: #FFEAEA;border-radius: 5px;color: #F63A3A;font-size: 14px;font-weight: 700;text-transform: capitalize;padding: 0 15px;">Industries</a>
                                                 @elseif($malist->categorie=="an")
@@ -502,7 +502,7 @@
                                         @if($malist->categorie=="fi")
                                         <a href="#">Finances</a>
                                         @elseif($malist->categorie=="po")
-                                        <a href="#">Politiques</a>
+                                        <a href="#">Infrastructures</a>
                                         @elseif($malist->categorie=="id")
                                         <a href="#">Industries</a>
                                         @elseif($malist->categorie=="an")
@@ -549,7 +549,7 @@
                                         @if($malist->image)
                                         <img src="{{$malist->image}}" width="322px" height="216px" alt="">
                                         @else
-                                        <img src="" alt="Vous avez oublié d'ajouter l'image">
+                                        <img src="" alt="Image manquante">
                                         @endif
                                     </div>
                                     <div class="binduz-er-content">
@@ -558,7 +558,7 @@
                                                 @if($malist->categorie=="fi")
                                                 <a href="#">Finances</a>
                                                 @elseif($malist->categorie=="po")
-                                                <a href="#">Politiques</a>
+                                                <a href="#">Infrastructures</a>
                                                 @elseif($malist->categorie=="id")
                                                 <a href="#">Industries</a>
                                                 @elseif($malist->categorie=="an")
@@ -594,7 +594,7 @@
                                     <input type="text" name="email" placeholder="Votre adresse mail">
                                 </div>
                                 <div class="binduz-er-input-box " style="padding-top: 7px;margin-top: 14px;">
-                                    <button type="submit" style="color: white;margin-right: 42px;"><i class="fal fa-long-arrow-right"></i> Souscrire</button>
+                                    <button type="submit" style="color: white;margin-right: 42px;"><i class="fal fa-long-arrow-right"></i>S'abonner</button>
                                 </div>
                             </div>
                         </form>
@@ -678,7 +678,7 @@
                                 <div class="binduz-er-content">
                                     <div class="binduz-er-meta-item">
                                         <div class="binduz-er-meta-categories">
-                                            <a href="#">Politiques</a>
+                                            <a href="#">Infrastructures</a>
                                         </div>
                                         <div class="binduz-er-meta-date">
                                             <span><i class="fal fa-calendar-alt"></i> 14th February 2023</span>
@@ -697,7 +697,7 @@
                                 <div class="binduz-er-content">
                                     <div class="binduz-er-meta-item">
                                         <div class="binduz-er-meta-categories">
-                                            <a href="#">Politiques</a>
+                                            <a href="#">Infrastructures</a>
                                         </div>
                                         <div class="binduz-er-meta-date">
                                             <span><i class="fal fa-calendar-alt"></i> 14th February 2023</span>

@@ -22,7 +22,7 @@
 
                                         <div class="flex-grow-1 overflow-hidden">
                                             <h5 class="font-size-16 mb-1">Rééditer le formulaire suivant</h5>
-                                            <p class="text-muted text-truncate mb-0"><span style="color: red;">NB: (Vous devez de nouveau sélectioner une image.)</span></p>
+                                            <!-- <p class="text-muted text-truncate mb-0"><span style="color: red;">NB: (Vous devez de nouveau sélectioner une image.)</span></p> -->
                                         </div>
 
 
@@ -43,7 +43,7 @@
                                                     @if($errors->has('title'))
                                                     <span class="text-danger">{{$errors->first('title')}}</span>
                                                     @endif
-                                                    <input id="manufacturername" name="title" value="{{$article[0]->title}}" type="text" class="form-control" required>
+                                                    <input id="manufacturername" name="title" value="{{$article[0]->title}}" type="text" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -52,7 +52,7 @@
                                                     @if($errors->has('categorie'))
                                                     <span class="text-danger">{{$errors->first('categorie')}}</span>
                                                     @endif
-                                                    <select class="form-control" name="categorie" required id="choices-single-category">
+                                                    <select class="form-control" name="categorie" id="choices-single-category">
                                                         @if($article[0]->categorie=="fi")
                                                         <option value="{{$article[0]->categorie}}">Finances </option>
                                                         @elseif($article[0]->categorie=="po")
@@ -78,9 +78,14 @@
                                         </div>
                                         <div class="col-md-8">
                                             <label for="formFileLg" class="form-label" style="color: red;">(Nb: La taille maximale 574*574)</label>
+                                            @if ($message = Session::get('error'))
+                                            <div class="alert alert-danger">
+                                                <p>{{ $message }}</p>
+                                            </div>
+                                            @endif
                                             <div class="col-md-8 input-group mb-3">
                                                 <label class="input-group-text" for="inputGroupFile01"><Strong>Charger</Strong></label>
-                                                <input type="file" name="image" class="form-control" id="inputGroupFile01" required>
+                                                <input type="file" name="image" class="form-control" id="inputGroupFile01">
                                             </div>
                                         </div>
                                         <div class="col-md-8 mb-0">
@@ -88,42 +93,42 @@
                                             @if($errors->has('blockote'))
                                             <span class="text-danger">{{$errors->first('blockote')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="blockote"  id="productdesc2" placeholder="Entrez le premier paragraphe" rows="8">{{$article[0]->blockote}}</textarea>
+                                            <textarea class="form-control" name="blockote" id="productdesc2" placeholder="Entrez le premier paragraphe" rows="8">{{$article[0]->blockote}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc3">Paragraphe1</label>
                                             @if($errors->has('paragraphe1'))
                                             <span class="text-danger">{{$errors->first('paragraphe1')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="paragraphe1" required id="productdesc2" rows="8">{{$article[0]->paragraphe1}}</textarea>
+                                            <textarea class="form-control" name="paragraphe1" id="productdesc2" rows="8">{{$article[0]->paragraphe1}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe2</label>
                                             @if($errors->has('paragraphe2'))
                                             <span class="text-danger">{{$errors->first('paragraphe2')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="paragraphe2" required id="productdesc3" rows="8">{{$article[0]->paragraphe2}}</textarea>
+                                            <textarea class="form-control" name="paragraphe2" id="productdesc3" rows="8">{{$article[0]->paragraphe2}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe3</label>
                                             @if($errors->has('paragraphe3'))
                                             <span class="text-danger">{{$errors->first('paragraphe3')}}</span>
                                             @endif
-                                            <textarea class="form-control" name="paragraphe3"  id="productdesc4" rows="8">{{$article[0]->paragraphe3}}</textarea>
+                                            <textarea class="form-control" name="paragraphe3" id="productdesc4" rows="8">{{$article[0]->paragraphe3}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe4</label>
                                             @if($errors->has('paragraphe4'))
                                             <span class="text-danger">{{$errors->first('paragraphe4')}}</span>
                                             @endif
-                                            <textarea class="form-control"  name="paragraphe4" id="productdesc5" rows="8">{{$article[0]->paragraphe4}}</textarea>
+                                            <textarea class="form-control" name="paragraphe4" id="productdesc5" rows="8">{{$article[0]->paragraphe4}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe5</label>
                                             @if($errors->has('paragraphe5'))
                                             <span class="text-danger">{{$errors->first('paragraphe5')}}</span>
                                             @endif
-                                            <textarea class="form-control"  name="paragraphe5" id="productdesc6" rows="8"> {{$article[0]->paragraphe5}}</textarea>
+                                            <textarea class="form-control" name="paragraphe5" id="productdesc6" rows="8"> {{$article[0]->paragraphe5}}</textarea>
                                         </div>
                                         <div class="col-md-8 mb-0">
                                             <label class="form-label" for="productdesc">Paragraphe6</label>
@@ -171,11 +176,11 @@
                                     </form>
                                     @if(Session::has('message'))
                                     <script>
-                                            swal("Message","{{Session::get('message')}}",'success',{
-                                                button:true,
-                                                button:"OK",
-                                                timer:3000,
-                                            });
+                                        swal("Message", "{{Session::get('message')}}", 'success', {
+                                            button: true,
+                                            button: "OK",
+                                            timer: 3000,
+                                        });
                                     </script>
                                     @endif
                                 </div>

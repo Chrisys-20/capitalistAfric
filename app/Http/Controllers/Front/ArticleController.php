@@ -77,7 +77,7 @@ class ArticleController extends Controller
             ->where('categorie', $categorie)
             ->where('status', 'desactivé')
             ->get();
-
+          //  dd($allArticle);
 
         $categoriesOff = DB::table('articles')
             ->where('status', 'activé')

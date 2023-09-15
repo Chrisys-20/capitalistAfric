@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Back\Article;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -15,8 +16,11 @@ class ListController extends Controller
 
         
         
-        $articleList=DB::table('articles')
-        ->get();
+        // $articleList=DB::table('articles')
+        // ->get();
+        $articleList=Article::paginate(10);
+
+      // dd($articleList->links());
         $totalearticle=DB::table('articles')
         ->get()->count();
 
