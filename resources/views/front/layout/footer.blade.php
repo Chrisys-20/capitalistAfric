@@ -66,7 +66,7 @@
                           <a href="#"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt=""></a>
                       </div>
                       <div class="binduz-er-text">
-                          <p>Capitalist Africa est la référence pour l'actualité économique, financière et politique africaine. </p>
+                          <p>Capitalist Africa est la référence pour l'actualité économique, financière africaine. </p>
                       </div>
 
                   </div>
@@ -74,7 +74,7 @@
           </div>
       </div>
       <div class="binduz-er-back-to-top">
-          <p>BACK TO TOP <i class="fal fa-long-arrow-right"></i></p>
+          <p>REMONTER AU SOMMET <i class="fal fa-long-arrow-right"></i></p>
       </div>
   </footer>
   <div class="binduz-er-footer-copyright-area">

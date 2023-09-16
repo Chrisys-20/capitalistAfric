@@ -206,9 +206,12 @@
                                             @foreach($allArticle as $myListe)
                                             <div class="binduz-er-video-post binduz-er-recently-viewed-item">
                                                 <div class="binduz-er-latest-news-item">
-                                                    <!-- <div class="binduz-er-thumb">
-                                                        <img src="{{$myListe->image}}" width="299px" height="199px" alt="">
-                                                    </div> -->
+                                                    <div class="binduz-er-thumb">
+                                                        <?php 
+                                                        
+                                                        ?>
+                                                        <img src="<?php echo substr($myListe->image,0,3);?>" width="299px" height="199px" alt="">
+                                                        </div>
                                                     <div class="binduz-er-content">
                                                         <div class="binduz-er-meta-item">
                                                             <div class="binduz-er-meta-categories">

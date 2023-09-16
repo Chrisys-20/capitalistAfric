@@ -77,7 +77,7 @@
                 <div class=" col-lg-6">
                     <div class="binduz-er-about-us-content">
                         <h4 class="binduz-er-title">A propos</h4>
-                        <p style="text-align: justify;">Capitalist Africa est un site d’informations économiques, sectorielles et d'analyses politiques et financières en ligne qui couvre l’actualité de l’Afrique Subsaharienne et l'actualité boursière internationales. Il offre des nouvelles actualisées, des articles d’opinion,
+                        <p style="text-align: justify;">Capitalist Africa est un site d’informations économiques, sectorielles et d'analyses financières en ligne qui couvre l’actualité de l’Afrique Subsaharienne et l'actualité boursière internationales. Il offre des nouvelles actualisées, des articles d’opinion,
                              des interviews, des reportages, des analyses sur les sujets les plus importants et les plus pertinents. Le site est conçu pour être accessible, convivial et facile à naviguer pour tous les utilisateurs, qu’ils soient sur un ordinateur de bureau, un ordinateur portable,
                              une tablette ou un smartphone. Capitalist Africa s’efforce de fournir une couverture équilibrée et impartiale de l’actualité. Il est dirigé
                              par une équipe de journalistes expérimentés et passionnés qui ont pour objectif de donner aux lecteurs une perspective unique sur les événements économiques et financiers qui se déroulent en Afrique et dans le monde.</p>
@@ -160,7 +160,7 @@
                             <a href="#"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt=""></a>
                         </div>
                         <div class="binduz-er-text">
-                        <p>Capitalist Africa est la référence pour l'actualité économique, financière et politique africaine. </p>
+                        <p>Capitalist Africa est la référence pour l'actualité économique, financière africaine. </p>
                         </div>
 
                     </div>
@@ -168,7 +168,7 @@
             </div>
         </div>
         <div class="binduz-er-back-to-top">
-            <p>BACK TO TOP <i class="fal fa-long-arrow-right"></i></p>
+            <p>REMONTER AU SOMMET <i class="fal fa-long-arrow-right"></i></p>
         </div>
     </footer>
     <div class="binduz-er-footer-copyright-area">
