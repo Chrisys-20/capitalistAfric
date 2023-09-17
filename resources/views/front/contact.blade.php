@@ -37,8 +37,7 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{asset('capitalistAf/assets/css/style.css')}}">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5548895987560863"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5548895987560863" crossorigin="anonymous"></script>
 </head>
 
 <body class="gray-bg bg-2">
@@ -78,10 +77,10 @@
                     <div class="binduz-er-about-us-content">
                         <h4 class="binduz-er-title">A propos</h4>
                         <p style="text-align: justify;">Capitalist Africa est un site d’informations économiques, sectorielles et d'analyses financières en ligne qui couvre l’actualité de l’Afrique Subsaharienne et l'actualité boursière internationales. Il offre des nouvelles actualisées, des articles d’opinion,
-                             des interviews, des reportages, des analyses sur les sujets les plus importants et les plus pertinents. Le site est conçu pour être accessible, convivial et facile à naviguer pour tous les utilisateurs, qu’ils soient sur un ordinateur de bureau, un ordinateur portable,
-                             une tablette ou un smartphone. Capitalist Africa s’efforce de fournir une couverture équilibrée et impartiale de l’actualité. Il est dirigé
-                             par une équipe de journalistes expérimentés et passionnés qui ont pour objectif de donner aux lecteurs une perspective unique sur les événements économiques et financiers qui se déroulent en Afrique et dans le monde.</p>
-                   
+                            des interviews, des reportages, des analyses sur les sujets les plus importants et les plus pertinents. Le site est conçu pour être accessible, convivial et facile à naviguer pour tous les utilisateurs, qu’ils soient sur un ordinateur de bureau, un ordinateur portable,
+                            une tablette ou un smartphone. Capitalist Africa s’efforce de fournir une couverture équilibrée et impartiale de l’actualité. Il est dirigé
+                            par une équipe de journalistes expérimentés et passionnés qui ont pour objectif de donner aux lecteurs une perspective unique sur les événements économiques et financiers qui se déroulent en Afrique et dans le monde.</p>
+
                     </div>
                     <div class="binduz-er-about-us-content">
                         <h4 class="binduz-er-title">Nous contacter :</h4>
@@ -89,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -97,8 +96,8 @@
 
 
 
-  <!--====== BINDUZ FOOTER PART START ======-->
-  <footer class="binduz-er-footer-area">
+    <!--====== BINDUZ FOOTER PART START ======-->
+    <footer class="binduz-er-footer-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
@@ -160,7 +159,7 @@
                             <a href="#"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt=""></a>
                         </div>
                         <div class="binduz-er-text">
-                        <p>Capitalist Africa est la référence pour l'actualité économique, financière africaine. </p>
+                            <p>Capitalist Africa est la référence pour l'actualité économique, financière africaine. </p>
                         </div>
 
                     </div>
@@ -184,6 +183,7 @@
                         <ul>
                             <li><a href="{{route('condition')}}" target="new">Conditions générales</a></li>
                             <li><a href="https://policies.google.com/technologies/partner-sites" target="new">Avis de confidentialité</a></li>
+                            <p><i class="fas fa-location"></i> Yaouné, Biyem-Assi, Cameroun</p>
                             <!-- <li><a href="#">Claim A Report</a></li>
                             <li><a href="#">Careers</a></li> -->
                         </ul>

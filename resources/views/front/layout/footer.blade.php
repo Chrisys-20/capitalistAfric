@@ -66,7 +66,9 @@
                           <a href="#"><img src="{{asset('capitalistAf/assets/images/LogoCA.png')}}" alt=""></a>
                       </div>
                       <div class="binduz-er-text">
-                          <p>Capitalist Africa est la référence pour l'actualité économique, financière africaine. </p>
+                          <p>Capitalist Africa est la référence pour l'actualité économique et financière Africaine. </p>
+                          <p><i class="fas fa-location"></i> Yaouné, Biyem-Assi, Cameroun</p>
+
                       </div>
 
                   </div>

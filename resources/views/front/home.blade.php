@@ -207,7 +207,7 @@
                                                                     <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
                                                                 </div> -->
                                                                 <div class="binduz-er-trending-news-title">
-                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
+                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre portée</a></h3>
                                                                 </div>
                                                             </div>
                                                             <!-- <div class="binduz-er-news-share">
@@ -321,7 +321,7 @@
                                                                     <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
                                                                 </div> -->
                                                                 <div class="binduz-er-trending-news-title">
-                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
+                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre portée</a></h3>
                                                                 </div>
                                                             </div>
                                                             <!-- <div class="binduz-er-news-share">
@@ -378,7 +378,7 @@
                                                                     <span><i class="fal fa-calendar-alt"></i> 24th February 2020</span>
                                                                 </div> -->
                                                                 <div class="binduz-er-trending-news-title">
-                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre porté</a></h3>
+                                                                    <h3 class="binduz-er-title"><a href="#">L'actualité à votre portée</a></h3>
                                                                 </div>
                                                             </div>
                                                             <!-- <div class="binduz-er-news-share">
@@ -589,7 +589,7 @@
                             <div class="binduz-er-newsletter-box text-center">
                                 <img src="assets/images/icon/icon-3.png" alt="">
                                 <h3 class="binduz-er-title"> Newsletter</h3>
-                                <p>L'info à votre porté.</p>
+                                <p>L'info à votre portée.</p>
                                 <div class="binduz-er-input-box">
                                     <input type="text" name="email" placeholder="Votre adresse mail">
                                 </div>
