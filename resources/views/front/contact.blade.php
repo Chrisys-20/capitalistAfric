@@ -183,7 +183,7 @@
                         <ul>
                             <li><a href="{{route('condition')}}" target="new">Conditions générales</a></li>
                             <li><a href="https://policies.google.com/technologies/partner-sites" target="new">Avis de confidentialité</a></li>
-                            <p><i class="fas fa-location"></i> Yaouné, Biyem-Assi, Cameroun</p>
+                            <p><i class="fas fa-location"></i> Yaoundé, Biyem-Assi, Cameroun</p>
                             <!-- <li><a href="#">Claim A Report</a></li>
                             <li><a href="#">Careers</a></li> -->
                         </ul>

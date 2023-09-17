@@ -67,7 +67,7 @@
                       </div>
                       <div class="binduz-er-text">
                           <p>Capitalist Africa est la référence pour l'actualité économique et financière Africaine. </p>
-                          <p><i class="fas fa-location"></i> Yaouné, Biyem-Assi, Cameroun</p>
+                          <p><i class="fas fa-location"></i> Yaoundé, Biyem-Assi, Cameroun</p>
 
                       </div>
 
