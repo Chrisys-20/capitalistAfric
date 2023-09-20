@@ -109,13 +109,13 @@
                                     <!-- <img src="assets/images/user-2.jpg" alt=""> -->
                                     <span>Par <span>Capitalist Africa</span></span>
                                 </div>
-                                <div class="binduz-er-meta-list">
+                                <!-- <div class="binduz-er-meta-list">
                                     <ul>
                                         <li><i class="fal fa-eye"></i> {{$totalvue}}  Vue(s) </li>
-                                        <!-- <li><i class="fal fa-heart"></i> 5k</li>
-                                        <li><i class="fal fa-comments"></i> 5k</li> -->
+                                        <li><i class="fal fa-heart"></i> 5k</li>
+                                        <li><i class="fal fa-comments"></i> 5k</li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="row">
