@@ -206,12 +206,10 @@
                                             @foreach($allArticle as $myListe)
                                             <div class="binduz-er-video-post binduz-er-recently-viewed-item">
                                                 <div class="binduz-er-latest-news-item">
-                                                    <div class="binduz-er-thumb">
-                                                        <?php 
+                                                    <!-- <div class="binduz-er-thumb">
                                                         
-                                                        ?>
                                                         <img src="<?php echo substr($myListe->image,0,3);?>" width="299px" height="199px" alt="">
-                                                        </div>
+                                                        </div> -->
                                                     <div class="binduz-er-content">
                                                         <div class="binduz-er-meta-item">
                                                             <div class="binduz-er-meta-categories">
@@ -262,9 +260,9 @@
                                     <div class="binduz-er-sidebar-latest-post-box">
                                         @foreach($ArticleDesac as $myListe)
                                         <div class="binduz-er-sidebar-latest-post-item">
-                                            <div class="binduz-er-thumb">
+                                            <!-- <div class="binduz-er-thumb">
                                                 <img src="{{$myListe->image}}" alt="latest">
-                                            </div>
+                                            </div> -->
                                             <div class="binduz-er-content">
                                                 <span><i class="fal fa-calendar-alt"></i> {{$myListe->updated_at}}</span>
                                                 <h4 class="binduz-er-title"><a href="#">{{$myListe->title}}</a></h4>
