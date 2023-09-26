@@ -146,7 +146,7 @@
                                 <div class="binduz-er-footer-widget-form">
                                     <div class="binduz-er-input-box">
                                         <!-- <p><i class="fas fa-phone"></i> (+237)</p> -->
-                                        <p><i class="fas fa-envelope"></i> contact@capitalistAfrica.com</p>
+                                        <p><i class="fas fa-envelope"></i> contact@capitalistafrica.com</p>
                                     </div>
                                 </div>
                             </div>

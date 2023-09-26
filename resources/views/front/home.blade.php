@@ -7,13 +7,14 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="capitalist Africa est un site qui publie des articles d’actualité de manières journalière">
+    <meta name="keywords" content="actuality, africa, capitalist,industry, economy, finance, sotck, infrastructure, analysis">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
     <title>Capitalist| Africa</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{asset('capitalistAf/assets/images/LogoCA.png')}}" type="image/png">
+    <link rel="shortcut icon" href="{{asset('capitalistAf/assets/images/capitalist.png')}}" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="{{asset('capitalistAf/assets/css/bootstrap.min.css')}}">
