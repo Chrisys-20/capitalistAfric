@@ -14,7 +14,7 @@
     <title>Capitalist| Africa</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{asset('capitalistAf/assets/images/LogoCA.png')}}" type="image/png">
+    <link rel="shortcut icon" href="{{asset('capitalistAf/assets/images/capitalist.png')}}" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="{{asset('capitalistAf/assets/css/bootstrap.min.css')}}">
