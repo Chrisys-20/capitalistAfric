@@ -2940,6 +2940,7 @@ p {
       .binduz-er-main-posts-item .binduz-er-trending-news-list-box .binduz-er-thumb img {
         width: 100%;
         transition: all linear 0.5s; }
+      
       @media (max-width: 767px) {
         .binduz-er-main-posts-item .binduz-er-trending-news-list-box .binduz-er-thumb {
           margin-bottom: 0; } }
@@ -2951,6 +2952,18 @@ p {
       padding-right: 28px;
       font-size: 14px;
       border-radius: 0 0 10px 10px; }
+      .binduz-er-main-posts-item .binduz-er-trending-news-list-box .binduz-er-content .binduz-er-trending-news-list-title .paragraph {
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical; 
+        overflow: hidden;
+      }
+      .binduz-er-main-posts-item .binduz-er-trending-news-list-box .binduz-er-content .binduz-er-trending-news-list-title .binduz-er-title {
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical; 
+        overflow: hidden;
+      }
       @media only screen and (min-width: 1200px) and (max-width: 1600px) {
         .binduz-er-main-posts-item .binduz-er-trending-news-list-box .binduz-er-content {
           padding-left: 20px;
@@ -2958,6 +2971,12 @@ p {
           padding-top: 20px; } }
       .binduz-er-main-posts-item .binduz-er-trending-news-list-box .binduz-er-content .binduz-er-trending-news-list-title .binduz-er-title {
         margin-bottom: 5px; }
+        .binduz-er-main-posts-item .binduz-er-trending-news-list-box .binduz-er-content .binduz-er-trending-news-list-title .paragraph {
+          -webkit-line-clamp: 3;
+          display: -webkit-box;
+          -webkit-box-orient: vertical; 
+          overflow: hidden;
+        }
       .binduz-er-main-posts-item .binduz-er-trending-news-list-box .binduz-er-content .binduz-er-meta-item .binduz-er-meta-date {
         margin-left: 15px; }
         @media only screen and (min-width: 1200px) and (max-width: 1600px) {

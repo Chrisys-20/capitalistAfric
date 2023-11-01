@@ -14,7 +14,7 @@
     <title>Capitalist| Africa</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{asset('capitalistAf/assets/images/capitalist.png')}}" type="image/png">
+    <link rel="shortcut icon" href="{{asset('capitalistAf/assets/images/LogoCA.png')}}" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="{{asset('capitalistAf/assets/css/bootstrap.min.css')}}">
@@ -225,7 +225,7 @@
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
                                                             @if($mycategorie->image)
-                                                            <img src="{{$mycategorie->image}}" width="116px" height="100px" alt="">
+                                                            <img src="storage/{{$mycategorie->image}}" width="116px" height="100px" alt="">
                                                             @else
                                                             <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" width="116px" height="100px" alt="">
                                                             @endif
@@ -557,24 +557,24 @@
                                         <div class="binduz-er-meta-item">
                                             <div class="binduz-er-meta-categories">
                                                 @if($malist->categorie=="fi")
-                                                <a href="#">Finances</a>
+                                                <a href="#">Finances <span style="color: #FFEAEA;">lll</span></a> 
                                                 @elseif($malist->categorie=="po")
                                                 <a href="#">Infrastructures</a>
                                                 @elseif($malist->categorie=="id")
-                                                <a href="#">Industries</a>
+                                                <a href="#">Industries<span style="color: #FFEAEA;">lll</span></a>
                                                 @elseif($malist->categorie=="an")
-                                                <a href="#">Analyses</a>
+                                                <a href="#">Analyses<span style="color: #FFEAEA;">lll</span></a>
                                                 @else
-                                                <a href="#">Bourse</a>
+                                                <a href="#">Bourse<span style="color: #FFEAEA;">lllllll</span></a>
                                                 @endif
                                             </div>
                                             <div class="binduz-er-meta-date">
-                                                <span><i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>
+                                                <span> <i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>
                                             </div>
                                         </div>
                                         <div class="binduz-er-trending-news-list-title">
                                             <h4 class="binduz-er-title"><a href="{{route('article.details',['ref'=>$malist->ref,'categorie'=>$malist->categorie])}}">{{$malist->title}}</a></h4>
-                                            <p>{{$malist->paragraphe1}}</p>
+                                            <p class="paragraph">{{$malist->paragraphe1}}</p>
                                         </div>
                                     </div>
                                 </div>
