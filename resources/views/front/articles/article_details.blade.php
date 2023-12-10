@@ -35,8 +35,7 @@
 
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{asset('capitalistAf/assets/css/style.css')}}">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5548895987560863"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5548895987560863" crossorigin="anonymous"></script>
 
 </head>
 
@@ -206,10 +205,10 @@
                                             @foreach($allArticle as $myListe)
                                             <div class="binduz-er-video-post binduz-er-recently-viewed-item">
                                                 <div class="binduz-er-latest-news-item">
-                                                    <!-- <div class="binduz-er-thumb">
-                                                        <img src="<?php echo substr($myListe->image,0,3);?>" width="299px" height="199px" alt="">
-                                                        </div> -->
-                                                        <!-- <span></span> -->
+                                                    <div class="binduz-er-thumb">
+                                                        <img src="{{asset($myListe->image)}}" width="299px" height="199px" alt="">
+                                                    </div>
+                                                    <!-- <span></span> -->
                                                     <div class="binduz-er-content">
                                                         <div class="binduz-er-meta-item">
                                                             <div class="binduz-er-meta-categories">

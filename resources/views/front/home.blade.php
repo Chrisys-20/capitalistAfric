@@ -225,7 +225,7 @@
                                                     <div class="binduz-er-trending-news-list-box">
                                                         <div class="binduz-er-thumb">
                                                             @if($mycategorie->image)
-                                                            <img src="storage/{{$mycategorie->image}}" width="116px" height="100px" alt="">
+                                                            <img src="{{$mycategorie->image}}" width="116px" height="100px" alt="">
                                                             @else
                                                             <img src="{{asset('capitalistAf/assets/images/trending-news-list-thumb-1.jpg')}}" width="116px" height="100px" alt="">
                                                             @endif
