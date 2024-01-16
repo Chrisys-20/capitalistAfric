@@ -84,7 +84,7 @@
           <div class="row align-items-center">
               <div class="col-lg-6">
                   <div class="binduz-er-copyright-text">
-                      <p>2023 &copy; All right reserved By <span><a href="#" style="color: white;">CAPITALIST AFRICA</a></span> </p>
+                      <p>2024 &copy; All right reserved By <span><a href="#" style="color: white;">CAPITALIST AFRICA</a></span> </p>
                   </div>
               </div>
               <div class="col-lg-6">
