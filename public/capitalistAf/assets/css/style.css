@@ -6079,7 +6079,7 @@ p {
 
 .binduz-er-blog-bg-area {
   height: 500px;
-  background-image: url(../images/blog-details-bg.jpg);
+  /* background-image: url(../images/blog-details-bg.jpg); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }

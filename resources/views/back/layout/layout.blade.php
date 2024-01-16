@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="capitalist Africa est un site qui publie des articles d’actualité de manières journalière" name="description" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('capitalistAf/assets/images/LogoCA.png')}}">
+    <link rel="shortcut icon" href="{{asset('capitalistAf/assets/images/capitalist.png')}}" type="image/png">
 
     <!-- plugin css -->
     <link href="{{asset('dashboard/assets/libs/jsvectormap/css/jsvectormap.min.css')}}" rel="stylesheet" type="text/css" />

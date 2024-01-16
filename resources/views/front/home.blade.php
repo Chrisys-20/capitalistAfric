@@ -6,8 +6,9 @@
     <!--====== Required meta tags ======-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="capitalist Africa est un site qui publie des articles d’actualité de manières journalière">
-    <meta name="keywords" content="actuality, africa, capitalist,industry, economy, finance, sotck, infrastructure, analysis">
+    <meta name="description" content="capitalist Africa est un site d'informations économiques, sectorielles 
+    et d'analyses financières en ligne qui couvre l'actualité de l'Afrique Subsaharienne et l'actualité boursière internationale.">
+    <meta name="keywords" content="actuality, africa, capitalist,industry, economy, finance, sotck, infrastructure, analysis, subsaharienne, bourse">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
@@ -557,19 +558,20 @@
                                         <div class="binduz-er-meta-item">
                                             <div class="binduz-er-meta-categories">
                                                 @if($malist->categorie=="fi")
-                                                <a href="#">Finances <span style="color: #FFEAEA;">lll</span></a> 
+                                                <a href="#">Finances </a> 
                                                 @elseif($malist->categorie=="po")
                                                 <a href="#">Infrastructures</a>
                                                 @elseif($malist->categorie=="id")
-                                                <a href="#">Industries<span style="color: #FFEAEA;">lll</span></a>
+                                                <a href="#">Industries</a>
                                                 @elseif($malist->categorie=="an")
-                                                <a href="#">Analyses<span style="color: #FFEAEA;">lll</span></a>
+                                                <a href="#">Analyses</a>
                                                 @else
-                                                <a href="#">Bourse<span style="color: #FFEAEA;">lllllll</span></a>
+                                                <a href="#">Bourse</a> 
                                                 @endif
                                             </div>
+                                            <br>
                                             <div class="binduz-er-meta-date">
-                                                <span> <i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>
+                                            <span> <i class="fal fa-calendar-alt"></i> {{$malist->updated_at}}</span>
                                             </div>
                                         </div>
                                         <div class="binduz-er-trending-news-list-title">

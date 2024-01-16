@@ -76,7 +76,7 @@
     <!--====== BINDUZ HEADER PART ENDS ======-->
 
     <!--====== BINDUZ AUTHOR USER PART START ======-->
-    <div class="binduz-er-blog-bg-area"></div>
+    <div class="binduz-er-blog-bg-area" style="background-image: url('{{ asset($monArticle[0]->image)}}');"></div>
     <section class="binduz-er-author-item-area binduz-er-author-item-layout-1 pb-20">
         <div class=" container">
             <div class="row">
@@ -145,35 +145,35 @@
                                         <p style="text-align: justify;">{{$monArticle[0]->paragraphe4}}</p>
                                     </div>
                                     @endif
-                                    @if(!empty($monArticle[0]->paragraphe10))
+                                    @if(!empty($monArticle[0]->paragraphe5))
 
                                     <div class="binduz-er-text pt-50 text-justify">
                                         <p style="text-align: justify;">{{$monArticle[0]->paragraphe5}}</p>
                                     </div>
                                     @endif
 
-                                    @if(!empty($monArticle[0]->paragraphe10))
+                                    @if(!empty($monArticle[0]->paragraphe6))
 
                                     <div class="binduz-er-text pt-50 text-justify">
                                         <p style="text-align: justify;">{{$monArticle[0]->paragraphe6}}</p>
                                     </div>
                                     @endif
 
-                                    @if(!empty($monArticle[0]->paragraphe10))
+                                    @if(!empty($monArticle[0]->paragraphe7))
 
                                     <div class="binduz-er-text pt-50 text-justify">
                                         <p style="text-align: justify;">{{$monArticle[0]->paragraphe7}}</p>
                                     </div>
                                     @endif
 
-                                    @if(!empty($monArticle[0]->paragraphe10))
+                                    @if(!empty($monArticle[0]->paragraphe8))
 
                                     <div class="binduz-er-text pt-50 text-justify">
                                         <p style="text-align: justify;">{{$monArticle[0]->paragraphe8}}</p>
                                     </div>
                                     @endif
 
-                                    @if(!empty($monArticle[0]->paragraphe10))
+                                    @if(!empty($monArticle[0]->paragraphe9))
 
                                     <div class="binduz-er-text pt-50 text-justify">
                                         <p style="text-align: justify;">{{$monArticle[0]->paragraphe9}}</p>
